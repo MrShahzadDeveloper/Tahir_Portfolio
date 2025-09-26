@@ -29,18 +29,23 @@ export default function Navbar() {
         {["Home", "Project", "About", "Blog"].map((item) => (
           <li key={item} className="relative cursor-pointer group">
             <span className="hover:text-[#C9F31D] transition">{item}</span>
-            {/* Underline effect */}
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#C9F31D] transition-all duration-300 group-hover:w-full"></span>
           </li>
         ))}
 
-        {/* Dropdown */}
-        <li className="relative cursor-pointer group">
-          <button
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="flex items-center gap-1 hover:text-[#C9F31D] transition"
-          >
-            All Pages <FiChevronDown />
+        {/* Dropdown (hover on desktop) */}
+        <li
+          className="relative cursor-pointer group"
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <button className="flex items-center gap-1 hover:text-[#C9F31D] transition">
+            All Pages{" "}
+            <FiChevronDown
+              className={`transition-transform duration-300 ${
+                dropdownOpen ? "rotate-180" : "rotate-0"
+              }`}
+            />
           </button>
           <ul
             className={`absolute left-0 mt-2 bg-black border border-gray-700 rounded-md shadow-lg text-sm w-44 transition-all duration-300 overflow-hidden ${
@@ -64,7 +69,6 @@ export default function Navbar() {
         <span className="relative z-10 text-sm flex items-center gap-2">
           CONTACT <FiArrowUpRight />
         </span>
-        {/* Hover background wipe */}
         <span className="absolute left-0 top-0 h-full w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
       </button>
 
@@ -89,13 +93,18 @@ export default function Navbar() {
           </a>
         ))}
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Dropdown (still toggleable by click) */}
         <div className="w-full flex flex-col items-center">
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
             className="flex items-center gap-1 hover:text-[#C9F31D] transition"
           >
-            All Pages <FiChevronDown />
+            All Pages{" "}
+            <FiChevronDown
+              className={`transition-transform duration-300 ${
+                dropdownOpen ? "rotate-180" : "rotate-0"
+              }`}
+            />
           </button>
           <ul
             className={`flex flex-col items-center gap-2 mt-2 transition-all duration-300 overflow-hidden ${
