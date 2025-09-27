@@ -26,7 +26,7 @@ const ServicesSection = () => {
 
       {/* Services List */}
       <div className="space-y-6">
-        {services.map((service, index) => (
+        {services.map((service) => (
           <div
             key={service.id}
             className="border-b border-gray-700 pb-4 cursor-pointer"
