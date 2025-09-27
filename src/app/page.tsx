@@ -5,7 +5,6 @@ import HeroSection from "@/section/HeroSection";
 import ProjectsSection from "@/section/ProjectsSection";
 import ServicesSection from "@/section/ServicesSection";
 import TestmonialSection from "@/section/TestmonialSection";
-import Image from "next/image";
 
 export default function Home() {
   return (

@@ -1,3 +1,6 @@
+import ha from "./assets/ha.png";
+import { FaFacebookF, FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
+
 export const services = [
   {
     id: 1,
@@ -22,5 +25,64 @@ export const services = [
     title: "UX/UI Design",
     details:
       "We believe that great design goes beyond aesthetics — it’s about how users feel when interacting with your product. Our UX/UI design services aim to create intuitive, user-friendly, and visually engaging interfaces that enhance the overall digital experience. We conduct in-depth research and user testing to understand your audience’s needs and behaviors, then design interfaces that are both beautiful and functional. From wireframes and prototypes to final polished designs, we focus on clarity, accessibility, and seamless navigation. The result is a design that not only delights users but also drives higher engagement, satisfaction, and conversions.",
+  },
+];
+
+export const projects = [
+  {
+    slug: "portfolio-website",
+    title: "Portfolio Website",
+    description: "A modern portfolio site built with Next.js and TailwindCSS.",
+    image: ha,
+    info: {
+      client: "Kazi Erfan",
+      category: "Technology",
+      completedOn: "July 30, 2024",
+      website: "www.pentaclay.com",
+    },
+    socials: [
+      {
+        name: "Facebook",
+        icon: FaFacebookF,
+        link: "https://facebook.com/pentaclay",
+      },
+      {
+        name: "Twitter",
+        icon: FaXTwitter,
+        link: "https://twitter.com/pentaclay",
+      },
+      {
+        name: "Instagram",
+        icon: FaInstagram,
+        link: "https://instagram.com/pentaclay",
+      },
+      {
+        name: "YouTube",
+        icon: FaYoutube,
+        link: "https://youtube.com/@pentaclay",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the typical timeline for a project?",
+        answer:
+          "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+      },
+      {
+        question: "How do you handle website maintenance and updates?",
+        answer:
+          "We provide ongoing website maintenance and updates to ensure security, performance, and feature enhancements as your business grows.",
+      },
+      {
+        question: "What strategies do you use for digital marketing?",
+        answer:
+          "We use SEO, social media campaigns, PPC, and content marketing strategies tailored to your business goals.",
+      },
+      {
+        question: "What payment methods do you accept?!",
+        answer:
+          "We accept all major credit cards, PayPal, and bank transfers depending on your preference.",
+      },
+    ],
   },
 ];

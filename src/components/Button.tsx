@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className="relative cursor-pointer flex items-center justify-center w-35 h-35 rounded-full border border-gray-500 overflow-hidden group transition-all duration-300"
+      className="relative cursor-pointer flex items-center justify-center w-30 h-30 sm:w-35 sm:h-35 rounded-full border border-gray-500 overflow-hidden group transition-all duration-300"
     >
       {/* Background dot that expands on hover */}
       <span
