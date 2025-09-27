@@ -21,7 +21,7 @@ const HeroSection = () => {
         {/* Intro text */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mb-4">
           <h3 className="font-bold text-sm sm:text-xl text-center sm:text-left">
-            Hey There! Tahir Mehmood Here
+            Hey There! Tahir Mehmood
           </h3>
           <hr className="hidden sm:block w-[80px] border-[#575757]" />
         </div>
