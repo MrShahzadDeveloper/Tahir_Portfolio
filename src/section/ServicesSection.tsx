@@ -18,7 +18,7 @@ const ServicesSection = () => {
       {/* Heading */}
       <div className="mb-10">
         <div className="flex items-center gap-3">
-        <p className="uppercase font-semibold">Services</p>
+        <p className="text-lg font-semibold">Services</p>
          <hr className="w-[80px] text-[#575757]" />
         </div>
         <h2 className="text-3xl md:text-5xl font-bold">Expertise Solutions</h2>
