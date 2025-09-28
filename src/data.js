@@ -1,3 +1,10 @@
+import ha from "./assets/ha.png";
+import { FaFacebookF, FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
+
+import client1 from "./assets/c1.png";
+import client2 from "./assets/c2.png";
+import client3 from "./assets/c3.png";
+
 export const services = [
   {
     id: 1,
@@ -24,3 +31,105 @@ export const services = [
       "We believe that great design goes beyond aesthetics — it’s about how users feel when interacting with your product. Our UX/UI design services aim to create intuitive, user-friendly, and visually engaging interfaces that enhance the overall digital experience. We conduct in-depth research and user testing to understand your audience’s needs and behaviors, then design interfaces that are both beautiful and functional. From wireframes and prototypes to final polished designs, we focus on clarity, accessibility, and seamless navigation. The result is a design that not only delights users but also drives higher engagement, satisfaction, and conversions.",
   },
 ];
+
+export const projects = [
+  {
+    slug: "portfolio-website",
+    title: "Portfolio Website",
+    description: "A modern portfolio site built with Next.js and TailwindCSS.",
+    image: ha,
+    info: {
+      client: "Kazi Erfan",
+      category: "Technology",
+      completedOn: "July 30, 2024",
+      website: "www.pentaclay.com",
+    },
+    socials: [
+      {
+        name: "Facebook",
+        icon: FaFacebookF,
+        link: "https://facebook.com/pentaclay",
+      },
+      {
+        name: "Twitter",
+        icon: FaXTwitter,
+        link: "https://twitter.com/pentaclay",
+      },
+      {
+        name: "Instagram",
+        icon: FaInstagram,
+        link: "https://instagram.com/pentaclay",
+      },
+      {
+        name: "YouTube",
+        icon: FaYoutube,
+        link: "https://youtube.com/@pentaclay",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the typical timeline for a project?",
+        answer:
+          "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+      },
+      {
+        question: "How do you handle website maintenance and updates?",
+        answer:
+          "We provide ongoing website maintenance and updates to ensure security, performance, and feature enhancements as your business grows.",
+      },
+      {
+        question: "What strategies do you use for digital marketing?",
+        answer:
+          "We use SEO, social media campaigns, PPC, and content marketing strategies tailored to your business goals.",
+      },
+      {
+        question: "What payment methods do you accept?!",
+        answer:
+          "We accept all major credit cards, PayPal, and bank transfers depending on your preference.",
+      },
+    ],
+  },
+];
+
+
+export const testimonials = [
+  {
+    text: "Working with Tahir Mehmood is a fantastic experience. He truly understood our vision and turned our dream home into a reality. The attention to detail and dedication were beyond my imagination",
+    name: "Cameron Williamson",
+    role: "CEO, ISHKON",
+    image: client1,
+  },
+  {
+    text: "Collaborating with Tahir Mehmood has been nothing short of incredible. He listened carefully to our requirements and delivered results that exceeded our expectations. The professionalism and creativity shown throughout the process made the entire journey smooth and enjoyable.",
+    name: "Jenny Wilson",
+    role: "Marketing Head, Globex",
+    image: client2,
+  },
+  {
+    text: "Tahir Mehmood transformed our ideas into something extraordinary. The level of commitment and precision he brought to the project was outstanding. Every detail was carefully handled, and the final outcome was more than we could have hoped for.",
+    name: "Robert Fox",
+    role: "Founder, Starto",
+    image: client3,
+  },
+];
+
+export const workProcess = [
+    {
+      icon: "/workProcess1.svg",
+      title: "Discovery & Research",
+      description:
+        "We start by getting to know your business, your goals, and your target audience. Through in-depth research and analysis, we gather valuable insights that inform.",
+    },
+    {
+      icon: "/workProcess2.avif",
+      title: "Strategy & Planning",
+      description:
+        "Based on our research, we develop a comprehensive strategy and detailed project plan. This includes setting clear goals, defining key performance indicators.",
+    },
+    {
+      icon: "/workProcess3.svg",
+      title: "Implementation & Deploy",
+      description:
+        "We start by delivering the results and taking feedback. Through in-depth research and analysis, we gather valuable feedback that shapes the output.",
+    },
+  ];

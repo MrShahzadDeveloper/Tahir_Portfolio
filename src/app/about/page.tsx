@@ -1,11 +1,33 @@
-import React from 'react'
+import React from "react";
 
-const page = () => {
+import ContactSection from "@/section/ContactSection";
+import ServicesSection from "@/section/ServicesSection";
+import AboutSection from "@/section/AboutSection";
+import AboutHeroSection from "@/section/AboutHeroSection";
+import WorkProcessSection from "@/section/WorkProcessSection";
+import TechStackSection from "@/section/TechStackSection";
+import TestmonialSection from "@/section/TestmonialSection";
+
+
+const Page = () => {
   return (
-    <div className='px-4 md:px-16 lg:px-32'>
-      <p>This is About me Page</p>
+    <div className="">
+      {/* Hero Section */}
+      <AboutHeroSection />
+      {/* About Details Section */}
+      <AboutSection />
+      {/* Work Process Section */}
+      <WorkProcessSection />
+      {/* Tech Stack Section */}
+      <TechStackSection />
+      {/* Services Section */}
+      <ServicesSection />
+      {/* Contact Section */}
+      {/* Testmonial Section */}
+      <TestmonialSection />
+      <ContactSection />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FiArrowUpRight, FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import logo from "../assets/logo2.png";
@@ -7,6 +8,20 @@ import logo from "../assets/logo2.png";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const navMenu = [
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "/projects" },
+    { name: "About", href: "/about" },
+    { name: "Blog", href: "/blog" },
+  ];
+
+  const dropdownMenu = [
+    { name: "Services", href: "/services" },
+    { name: "Team", href: "/team" },
+    { name: "Contact", href: "/contact" },
+    { name: "Portfolio", href: "/portfolio" },
+  ];
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -26,9 +41,11 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
-        {["Home", "Project", "About", "Blog"].map((item) => (
-          <li key={item} className="relative cursor-pointer group">
-            <span className="hover:text-[#C9F31D] transition">{item}</span>
+        {navMenu.map((item, index) => (
+          <li key={index} className="relative cursor-pointer group">
+            <Link href={item.href} className="hover:text-[#C9F31D] transition">
+              {item.name}
+            </Link>
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#C9F31D] transition-all duration-300 group-hover:w-full"></span>
           </li>
         ))}
@@ -52,12 +69,14 @@ export default function Navbar() {
               dropdownOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            {["Services", "Team", "Contact", "Portfolio"].map((item) => (
-              <li
-                key={item}
-                className="px-4 py-2 hover:bg-[#C9F31D] hover:text-black cursor-pointer transition"
-              >
-                {item}
+            {dropdownMenu.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="block px-4 py-2 hover:bg-[#C9F31D] hover:text-black transition"
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -65,12 +84,15 @@ export default function Navbar() {
       </ul>
 
       {/* Contact Button (Desktop) */}
-      <button className="hidden md:flex ml-6 relative overflow-hidden px-5 py-2 font-semibold items-center gap-2 transition text-black bg-[#C9F31D] group">
+      <Link
+        href="/contact"
+        className="hidden md:flex ml-6 relative overflow-hidden px-5 py-2 font-semibold items-center gap-2 transition text-black bg-[#C9F31D] group"
+      >
         <span className="relative z-10 text-sm flex items-center gap-2">
           CONTACT <FiArrowUpRight />
         </span>
         <span className="absolute left-0 top-0 h-full w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
-      </button>
+      </Link>
 
       {/* Hamburger (Mobile) */}
       <button
@@ -86,14 +108,18 @@ export default function Navbar() {
           mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        {["Home", "Project", "About", "Blog"].map((item) => (
-          <a key={item} className="relative cursor-pointer group">
-            <span className="hover:text-[#C9F31D] transition">{item}</span>
+        {navMenu.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            className="relative cursor-pointer group"
+          >
+            <span className="hover:text-[#C9F31D] transition">{item.name}</span>
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
-          </a>
+          </Link>
         ))}
 
-        {/* Mobile Dropdown (still toggleable by click) */}
+        {/* Mobile Dropdown (toggle by click) */}
         <div className="w-full flex flex-col items-center">
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -111,24 +137,29 @@ export default function Navbar() {
               dropdownOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            {["Services", "Team", "Contact", "Portfolio"].map((item) => (
-              <li
-                key={item}
-                className="px-4 py-2 hover:bg-[#C9F31D] hover:text-black cursor-pointer rounded-md transition"
-              >
-                {item}
+            {dropdownMenu.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="px-4 py-2 hover:bg-[#C9F31D] hover:text-black cursor-pointer rounded-md transition block"
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Contact Button (Mobile) */}
-        <button className="relative overflow-hidden px-6 py-3 font-semibold flex items-center gap-2 rounded-sm transition text-black bg-[#C9F31D] group">
+        <Link
+          href="/contact"
+          className="relative overflow-hidden px-6 py-3 font-semibold flex items-center gap-2 rounded-sm transition text-black bg-[#C9F31D] group"
+        >
           <span className="relative z-10 flex items-center gap-2">
             CONTACT <FiArrowUpRight />
           </span>
           <span className="absolute left-0 top-0 h-full w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
-        </button>
+        </Link>
       </div>
     </nav>
   );
