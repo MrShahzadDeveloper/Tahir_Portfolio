@@ -11,6 +11,10 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 
+import client1 from "./assets/c1.png";
+import client2 from "./assets/c2.png";
+import client3 from "./assets/c3.png";
+
 export const services = [
   {
     id: 1,
@@ -187,26 +191,44 @@ export const projects = [
 ];
 
 
-export const projectFaqs = [
+export const testimonials = [
   {
-    question: "What is the typical timeline for a project?",
-    answer:
-      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+    text: "Working with Tahir Mehmood is a fantastic experience. He truly understood our vision and turned our dream home into a reality. The attention to detail and dedication were beyond my imagination",
+    name: "Cameron Williamson",
+    role: "CEO, ISHKON",
+    image: client1,
   },
   {
-    question: "How do you handle website maintenance and updates?",
-    answer:
-      "We provide ongoing website maintenance and updates to ensure security, performance, and feature enhancements as your business grows.",
+    text: "Collaborating with Tahir Mehmood has been nothing short of incredible. He listened carefully to our requirements and delivered results that exceeded our expectations. The professionalism and creativity shown throughout the process made the entire journey smooth and enjoyable.",
+    name: "Jenny Wilson",
+    role: "Marketing Head, Globex",
+    image: client2,
   },
   {
-    question: "What strategies do you use for digital marketing?",
-    answer:
-      "We use SEO, social media campaigns, PPC, and content marketing strategies tailored to your business goals.",
-  },
-  {
-    question: "What payment methods do you accept?!",
-    answer:
-      "We accept all major credit cards, PayPal, and bank transfers depending on your preference.",
+    text: "Tahir Mehmood transformed our ideas into something extraordinary. The level of commitment and precision he brought to the project was outstanding. Every detail was carefully handled, and the final outcome was more than we could have hoped for.",
+    name: "Robert Fox",
+    role: "Founder, Starto",
+    image: client3,
   },
 ];
 
+export const workProcess = [
+    {
+      icon: "/workProcess1.svg",
+      title: "Discovery & Research",
+      description:
+        "We start by getting to know your business, your goals, and your target audience. Through in-depth research and analysis, we gather valuable insights that inform.",
+    },
+    {
+      icon: "/workProcess2.avif",
+      title: "Strategy & Planning",
+      description:
+        "Based on our research, we develop a comprehensive strategy and detailed project plan. This includes setting clear goals, defining key performance indicators.",
+    },
+    {
+      icon: "/workProcess3.svg",
+      title: "Implementation & Deploy",
+      description:
+        "We start by delivering the results and taking feedback. Through in-depth research and analysis, we gather valuable feedback that shapes the output.",
+    },
+  ];
