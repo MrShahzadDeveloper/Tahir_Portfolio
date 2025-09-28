@@ -3,15 +3,10 @@
 import { useState } from "react";
 import { FiPlus, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
-import { projects } from "@/data";
+import { projectFaqs } from "@/data"; // ✅ Import shared FAQs
 
-export default function ProjectDetailAccordion({ slug }: { slug: string }) {
-  const project = projects.find((p) => p.slug === slug);
+export default function ProjectDetailAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  if (!project) {
-    return <p className="text-red-500">Project not found.</p>;
-  }
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -20,7 +15,7 @@ export default function ProjectDetailAccordion({ slug }: { slug: string }) {
   return (
     <div className="w-full flex justify-center">
       <div className="w-full max-w-2xl space-y-4">
-        {project.faqs.map((faq, index) => {
+        {projectFaqs.map((faq, index) => {
           const isOpen = openIndex === index;
 
           return (
@@ -43,7 +38,7 @@ export default function ProjectDetailAccordion({ slug }: { slug: string }) {
                   {faq.question}
                 </h3>
 
-                {/* ✅ Single motion.span with fixed sizing + smooth animation */}
+                {/* ✅ Animated Plus/X */}
                 <motion.span
                   animate={{ rotate: isOpen ? -90 : 90, scale: isOpen ? 1 : 1.1 }}
                   transition={{

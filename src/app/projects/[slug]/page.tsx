@@ -61,30 +61,23 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
       </section>
 
       <section>
-        <Image src={project.image} alt={project.title} />
+        <Image className="" src={project.image} alt={project.title} />
       </section>
 
       <section className="mt-20 px-4 md:px-16 lg:px-32 flex gap-14">
         {/* Left Side */}
         <div className="max-w-3xl">
           <div>
-            <h3 className="text-lg text-[#D8D8D8] mb-3">Technology</h3>
+            <h3 className="text-lg text-[#D8D8D8] mb-3">{project.category}</h3>
             <h1 className="text-white text-5xl font-semibold">
-              ClayAI SaaS Website
+              {project.title}
             </h1>
           </div>
           <hr className="hidden sm:block w-full my-8 border-[#575757]" />
 
           <div>
             <p className="text-[#D8D8D8] mb-8">
-              We believe a brand goes beyond a logo or tagline—it&#39;s the core
-              of your business. Our Branding & Identity services help you build
-              and express your unique brand personality, ensuring it connects
-              with your audience and makes an impact in your market. We start
-              with a solid strategy, working with you to understand your
-              business goals, target audience, and positioning. Together, we
-              define your mission, vision, and values, creating a clear path for
-              your brand&#39;s success.
+              {project.para1}
             </p>
             <div className=" flex gap-5">
               <Image
@@ -95,41 +88,35 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
               />
               <div className="text-[#D8D8D8] flex flex-col justify-center">
                 <p className="mb-3 max-w-[340px]">
-                  Meeting project deadlines is a top priority. We understand the
-                  importance of timely delivery and have established a
-                  comprehensive approach to ensure that all projects.
+                  {project.para2}
                 </p>
                 <ul>
                   <li className="flex items-center gap-1">
                     <MdCheck size={22} color="#C9F31D" />
-                    <h3>Analytics & Strategy</h3>
+                    <h3>{project.li1}</h3>
                   </li>
                   <li className="flex items-center gap-1">
                     <MdCheck size={22} color="#C9F31D" />
-                    <h3>UX/UI Design</h3>
+                    <h3>{project.li2}</h3>
                   </li>
                   <li className="flex items-center gap-1">
                     <MdCheck size={22} color="#C9F31D" />
-                    <h3>Branding & Identity</h3>
+                    <h3>{project.li3}</h3>
                   </li>
                   <li className="flex items-center gap-1">
                     <MdCheck size={22} color="#C9F31D" />
-                    <h3>Web Development</h3>
+                    <h3>{project.li4}</h3>
                   </li>
                 </ul>
               </div>
             </div>
 
             <p className="text-[#D8D8D8] mt-8 ">
-              A successful brand starts with a clear strategy. We work closely
-              with you to understand your business goals, target audience, and
-              market positioning. Together, we define your brand&#39;s mission,
-              vision, and values, creating a solid foundation for all your
-              branding efforts.
+              {project.para3}
             </p>
 
             <div className="mt-10 flex justify-center">
-              <ProjectDetailAccordion slug={params.slug} />
+              <ProjectDetailAccordion />
             </div>
           </div>
         </div>
