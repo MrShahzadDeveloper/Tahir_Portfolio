@@ -1,5 +1,15 @@
-import ha from "./assets/ha.png";
-import { FaFacebookF, FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
+import BullDogs from "./assets/BullDogs.png"
+import barbr from "./assets/barbr.png"
+import chargers from "./assets/chargers.png"
+import haApp from "./assets/haApp.png"
+import lions from "./assets/loins.png"
+
+import {
+  FaFacebookF,
+  FaXTwitter,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa6";
 
 import client1 from "./assets/c1.png";
 import client2 from "./assets/c2.png";
@@ -34,10 +44,21 @@ export const services = [
 
 export const projects = [
   {
-    slug: "portfolio-website",
-    title: "Portfolio Website",
+    slug: "ha",
+    title: "Ha Health Ai",
+    category: "Technology",
+    para1:
+      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+    para2:
+      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+    para3:
+      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
     description: "A modern portfolio site built with Next.js and TailwindCSS.",
-    image: ha,
+    li1: "Analytics & Strategy",
+    li2: "UX/UI Design",
+    li3: "Branding & Identity",
+    li4: "Web Development",
+    image: haApp,
     info: {
       client: "Kazi Erfan",
       category: "Technology",
@@ -45,48 +66,126 @@ export const projects = [
       website: "www.pentaclay.com",
     },
     socials: [
-      {
-        name: "Facebook",
-        icon: FaFacebookF,
-        link: "https://facebook.com/pentaclay",
-      },
-      {
-        name: "Twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/pentaclay",
-      },
-      {
-        name: "Instagram",
-        icon: FaInstagram,
-        link: "https://instagram.com/pentaclay",
-      },
-      {
-        name: "YouTube",
-        icon: FaYoutube,
-        link: "https://youtube.com/@pentaclay",
-      },
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
     ],
-    faqs: [
-      {
-        question: "What is the typical timeline for a project?",
-        answer:
-          "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
-      },
-      {
-        question: "How do you handle website maintenance and updates?",
-        answer:
-          "We provide ongoing website maintenance and updates to ensure security, performance, and feature enhancements as your business grows.",
-      },
-      {
-        question: "What strategies do you use for digital marketing?",
-        answer:
-          "We use SEO, social media campaigns, PPC, and content marketing strategies tailored to your business goals.",
-      },
-      {
-        question: "What payment methods do you accept?!",
-        answer:
-          "We accept all major credit cards, PayPal, and bank transfers depending on your preference.",
-      },
+  },
+  {
+    slug: "barbr",
+    title: "Barbr",
+    category: "Technology",
+    para1:
+      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+    para2:
+      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+    para3:
+      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
+    description: "A modern portfolio site built with Next.js and TailwindCSS.",
+    li1: "Analytics & Strategy",
+    li2: "UX/UI Design",
+    li3: "Branding & Identity",
+    li4: "Web Development",
+    image: barbr,
+    info: {
+      client: "Kazi Erfan",
+      category: "Technology",
+      completedOn: "July 30, 2024",
+      website: "www.pentaclay.com",
+    },
+    socials: [
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
+    ],
+  },
+  {
+    slug: "bulldogs",
+    title: "BullDogs",
+    category: "Technology",
+    para1:
+      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+    para2:
+      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+    para3:
+      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
+    description: "A modern portfolio site built with Next.js and TailwindCSS.",
+    li1: "Analytics & Strategy",
+    li2: "UX/UI Design",
+    li3: "Branding & Identity",
+    li4: "Web Development",
+    image: BullDogs,
+    info: {
+      client: "Kazi Erfan",
+      category: "Technology",
+      completedOn: "July 30, 2024",
+      website: "www.pentaclay.com",
+    },
+    socials: [
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
+    ],
+  },
+  {
+    slug: "chargers",
+    title: "Chargers",
+    category: "Technology",
+    para1:
+      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+    para2:
+      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+    para3:
+      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
+    description: "A modern portfolio site built with Next.js and TailwindCSS.",
+    li1: "Analytics & Strategy",
+    li2: "UX/UI Design",
+    li3: "Branding & Identity",
+    li4: "Web Development",
+    image: chargers,
+    info: {
+      client: "Kazi Erfan",
+      category: "Technology",
+      completedOn: "July 30, 2024",
+      website: "www.pentaclay.com",
+    },
+    socials: [
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
+    ],
+  },
+  {
+    slug: "lions",
+    title: "Lions",
+    category: "Technology",
+    para1:
+      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+    para2:
+      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+    para3:
+      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
+    description: "A modern portfolio site built with Next.js and TailwindCSS.",
+    li1: "Analytics & Strategy",
+    li2: "UX/UI Design",
+    li3: "Branding & Identity",
+    li4: "Web Development",
+    image: lions,
+    info: {
+      client: "Kazi Erfan",
+      category: "Technology",
+      completedOn: "July 30, 2024",
+      website: "www.pentaclay.com",
+    },
+    socials: [
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
     ],
   },
 ];
