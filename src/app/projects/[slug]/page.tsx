@@ -60,11 +60,22 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
         </div>
       </section>
 
-      <section>
-        <Image className="" src={project.image} alt={project.title} />
+      <section className="w-full h-[800px] relative overflow-hidden">
+        <div className="absolute inset-0 transform -translate-y-10 shadow-2xl">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
+
+        {/* Gradient overlay → bright top, shadow bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
       </section>
 
-      <section className="mt-20 px-4 md:px-16 lg:px-32 flex gap-14">
+      <section className="mt-8 mb-20 px-4 md:px-16 lg:px-32 flex gap-14">
         {/* Left Side */}
         <div className="max-w-3xl">
           <div>
@@ -76,20 +87,19 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
           <hr className="hidden sm:block w-full my-8 border-[#575757]" />
 
           <div>
-            <p className="text-[#D8D8D8] mb-8">
-              {project.para1}
-            </p>
+            <p className="text-[#D8D8D8] mb-8">{project.para1}</p>
             <div className=" flex gap-5">
-              <Image
-                width={400}
-                height={400}
-                src={project.image}
-                alt={`${project.title} Image`}
-              />
+              <div className="w-[400px] h-[300px] relative overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} Image`}
+                  fill
+                  className="object-cover object-top" // 👈 show from the top (or object-left)
+                />
+              </div>
+
               <div className="text-[#D8D8D8] flex flex-col justify-center">
-                <p className="mb-3 max-w-[340px]">
-                  {project.para2}
-                </p>
+                <p className="mb-3 max-w-[340px]">{project.para2}</p>
                 <ul>
                   <li className="flex items-center gap-1">
                     <MdCheck size={22} color="#C9F31D" />
@@ -111,9 +121,7 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
               </div>
             </div>
 
-            <p className="text-[#D8D8D8] mt-8 ">
-              {project.para3}
-            </p>
+            <p className="text-[#D8D8D8] mt-8 ">{project.para3}</p>
 
             <div className="mt-10 flex justify-center">
               <ProjectDetailAccordion />

@@ -45,31 +45,32 @@ export const services = [
 export const projects = [
   {
     slug: "ha",
-    title: "Ha Health Ai",
+    title: "Ha Health AI",
     category: "Technology",
     para1:
-      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+      "Hā Health is your AI-powered wellness companion, built on evidence-based nutrition and holistic health principles. The app creates affordable meal plans, tracks exercise, and provides mindfulness tools tailored to your lifestyle.",
     para2:
-      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+      "Whether it’s managing a diet on a budget, staying consistent with workouts, or practicing meditation, Hā adapts to your personal needs. It delivers actionable, AI-personalised insights backed by science and dietitian best practices.",
     para3:
-      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
-    description: "A modern portfolio site built with Next.js and TailwindCSS.",
-    li1: "Analytics & Strategy",
-    li2: "UX/UI Design",
-    li3: "Branding & Identity",
-    li4: "Web Development",
+      "Hā means breath, energy, vitality—empowering you and your family to live healthier, longer lives with smart, adaptive guidance and real-time progress tracking.",
+    description:
+      "An AI-powered health and wellness app focused on nutrition, fitness, and mindfulness.",
+    li1: "AI Meal Planning",
+    li2: "Fitness & Mindfulness Tools",
+    li3: "Affordable Nutrition Guidance",
+    li4: "Progress Tracking & Insights",
     image: haApp,
     info: {
-      client: "Kazi Erfan",
-      category: "Technology",
-      completedOn: "July 30, 2024",
-      website: "www.pentaclay.com",
+      client: "Hā Labs",
+      category: "HealthTech",
+      completedOn: "August 12, 2024",
+      website: "www.hahealth.ai",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/hahealth" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/hahealth" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/hahealth" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@hahealth" },
     ],
   },
   {
@@ -77,28 +78,29 @@ export const projects = [
     title: "Barbr",
     category: "Technology",
     para1:
-      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+      "Barbr is a smart booking and business growth platform designed specifically for barbers. It helps barbers attract new clients, manage schedules, and grow their brand effortlessly.",
     para2:
-      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+      "With a unique booking link and customizable profile, barbers can save time while giving clients a seamless booking experience. Automated reminders and simple calendar management reduce no-shows and keep appointments organized.",
     para3:
-      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
-    description: "A modern portfolio site built with Next.js and TailwindCSS.",
-    li1: "Analytics & Strategy",
-    li2: "UX/UI Design",
-    li3: "Branding & Identity",
-    li4: "Web Development",
+      "Barbr empowers barbers to focus on their craft while unlocking their full earning potential, all while building stronger client relationships.",
+    description:
+      "A barber-focused platform for booking, client management, and brand growth.",
+    li1: "Smart Scheduling",
+    li2: "Client Management",
+    li3: "Brand Growth Tools",
+    li4: "Unique Booking Link",
     image: barbr,
     info: {
-      client: "Kazi Erfan",
-      category: "Technology",
-      completedOn: "July 30, 2024",
-      website: "www.pentaclay.com",
+      client: "Barbr Inc.",
+      category: "Business Tech",
+      completedOn: "September 20, 2024",
+      website: "www.barbrapp.com",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/barbrapp" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/barbrapp" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/barbrapp" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@barbrapp" },
     ],
   },
   {
@@ -106,28 +108,29 @@ export const projects = [
     title: "BullDogs",
     category: "Technology",
     para1:
-      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+      "BullDogs is a next-generation eSports and gaming community platform that connects players, fans, and teams. It combines live streaming, competitive match scheduling, and fan engagement into one sleek hub.",
     para2:
-      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+      "Players can showcase their talent, track stats, and gain visibility, while fans get access to highlights, exclusive content, and live chat interactions with their favorite gamers.",
     para3:
-      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
-    description: "A modern portfolio site built with Next.js and TailwindCSS.",
-    li1: "Analytics & Strategy",
-    li2: "UX/UI Design",
-    li3: "Branding & Identity",
-    li4: "Web Development",
+      "With its gamified approach and modern design, BullDogs is built to push gaming communities forward into the digital future.",
+    description:
+      "A modern eSports and gaming hub connecting players and fans with live features.",
+    li1: "Live Streaming",
+    li2: "Competitive Match Hub",
+    li3: "Player Profiles",
+    li4: "Fan Engagement Tools",
     image: BullDogs,
     info: {
-      client: "Kazi Erfan",
-      category: "Technology",
-      completedOn: "July 30, 2024",
-      website: "www.pentaclay.com",
+      client: "BullDogs Gaming",
+      category: "eSports",
+      completedOn: "October 2, 2024",
+      website: "www.bulldogsgaming.com",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/bulldogsgaming" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/bulldogsgaming" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/bulldogsgaming" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@bulldogsgaming" },
     ],
   },
   {
@@ -135,28 +138,29 @@ export const projects = [
     title: "Chargers",
     category: "Technology",
     para1:
-      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+      "Chargers is a clean-energy mobile app helping EV owners find, book, and pay for charging stations with ease. It’s designed for convenience, speed, and sustainability.",
     para2:
-      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+      "The app provides real-time availability, cost estimates, and route optimization to ensure drivers always know where their next charge is coming from.",
     para3:
-      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
-    description: "A modern portfolio site built with Next.js and TailwindCSS.",
-    li1: "Analytics & Strategy",
-    li2: "UX/UI Design",
-    li3: "Branding & Identity",
-    li4: "Web Development",
+      "By connecting EV drivers to charging infrastructure, Chargers supports the transition to greener, more efficient mobility worldwide.",
+    description:
+      "A smart EV charging app with booking, payments, and route optimization.",
+    li1: "Real-time Station Availability",
+    li2: "Seamless Payments",
+    li3: "Route Optimization",
+    li4: "Eco-friendly Mobility",
     image: chargers,
     info: {
-      client: "Kazi Erfan",
-      category: "Technology",
-      completedOn: "July 30, 2024",
-      website: "www.pentaclay.com",
+      client: "ChargeNet",
+      category: "CleanTech",
+      completedOn: "August 29, 2024",
+      website: "www.chargersapp.com",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/chargersapp" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/chargersapp" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/chargersapp" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@chargersapp" },
     ],
   },
   {
@@ -164,28 +168,29 @@ export const projects = [
     title: "Lions",
     category: "Technology",
     para1:
-      "We believe a brand goes beyond a logo or tagline—it’s the core of your business. Our Branding & Identity services help you build and express your unique brand personality, ensuring it connects with your audience and makes an impact in your market. We start with a solid strategy, working with you to understand your business goals, target audience, and positioning. Together, we define your mission, vision, and values, creating a clear path for your brand’s success.",
+      "Lions is an AI-driven social platform built for creative professionals. From designers to developers, it helps creators showcase portfolios, collaborate, and grow their networks.",
     para2:
-      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+      "The app intelligently recommends collaborations, events, and opportunities based on each user’s skills and career goals.",
     para3:
-      "A successful brand starts with a clear strategy. We work closely with you to understand your business goals, target audience, and market positioning. Together, we define your brand's mission, vision, and values, creating a solid foundation for all your branding efforts.",
-    description: "A modern portfolio site built with Next.js and TailwindCSS.",
-    li1: "Analytics & Strategy",
-    li2: "UX/UI Design",
-    li3: "Branding & Identity",
-    li4: "Web Development",
+      "Lions empowers the creative community with tools that help professionals grow faster while staying inspired.",
+    description:
+      "A social collaboration platform for creative professionals and innovators.",
+    li1: "Portfolio Showcasing",
+    li2: "AI Collaboration Matching",
+    li3: "Career Opportunities",
+    li4: "Community Building",
     image: lions,
     info: {
-      client: "Kazi Erfan",
-      category: "Technology",
-      completedOn: "July 30, 2024",
-      website: "www.pentaclay.com",
+      client: "Lions Network",
+      category: "SocialTech",
+      completedOn: "September 10, 2024",
+      website: "www.lionsnetwork.com",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/pentaclay" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/pentaclay" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/pentaclay" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@pentaclay" },
+      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/lionsnetwork" },
+      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/lionsnetwork" },
+      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/lionsnetwork" },
+      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@lionsnetwork" },
     ],
   },
 ];
@@ -212,8 +217,6 @@ export const projectFaqs = [
       "We accept all major credit cards, PayPal, and bank transfers depending on your preference.",
   },
 ];
-
-
 
 export const testimonials = [
   {
