@@ -190,6 +190,30 @@ export const projects = [
   },
 ];
 
+export const projectFaqs = [
+  {
+    question: "What is the typical timeline for a project?",
+    answer:
+      "Meeting project deadlines is a top priority. We understand the importance of timely delivery and have established a comprehensive approach to ensure that all projects.",
+  },
+  {
+    question: "How do you handle website maintenance and updates?",
+    answer:
+      "We provide ongoing website maintenance and updates to ensure security, performance, and feature enhancements as your business grows.",
+  },
+  {
+    question: "What strategies do you use for digital marketing?",
+    answer:
+      "We use SEO, social media campaigns, PPC, and content marketing strategies tailored to your business goals.",
+  },
+  {
+    question: "What payment methods do you accept?!",
+    answer:
+      "We accept all major credit cards, PayPal, and bank transfers depending on your preference.",
+  },
+];
+
+
 
 export const testimonials = [
   {
