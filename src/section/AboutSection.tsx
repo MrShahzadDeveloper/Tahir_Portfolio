@@ -5,7 +5,7 @@ import Button from "@/components/Button";
 
 const AboutSection = () => {
   return (
-    <section className="mt-20 px-4 md:px-12 lg:px-32">
+    <section className=" mt-20 px-4 md:px-12 lg:px-32">
       <div>
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
@@ -16,7 +16,7 @@ const AboutSection = () => {
               </h3>
               <hr className="w-[50px] md:w-[70px] text-[#575757]" />
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-8xl text-white font-bold leading-tight">
               Passion for <br /> Digital Innovation
             </h1>
           </div>
@@ -26,7 +26,7 @@ const AboutSection = () => {
         </div>
 
         {/* Content */}
-        <div className="mt-16 flex flex-col lg:flex-row justify-between gap-12 lg:gap-20 items-center">
+        <div className="mt-16 flex flex-col xl:flex-row justify-between gap-12 lg:gap-20 items-center">
           {/* Image */}
           <div className="relative w-full sm:w-[400px] md:w-[500px] h-[350px] sm:h-[400px] md:h-[450px] flex-shrink-0">
             <Image
@@ -86,7 +86,7 @@ const AboutSection = () => {
             </div>
 
             {/* Button */}
-            <div className="mt-8 sm:mt-10">
+            <div className="mt-8 sm:mt-10 flex flex-col justify-center items-center xl:items-start">
               <Button text="About me" />
             </div>
           </div>

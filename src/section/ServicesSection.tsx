@@ -14,7 +14,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="px-4 md:px-16 lg:px-32 py-16 bg-black text-white">
+    <section className="px-4 sm:px-8 md:px-16 xl:px-32 py-16 bg-black text-white">
       {/* Heading */}
       <div className="mb-10">
         <div className="flex items-center gap-3">

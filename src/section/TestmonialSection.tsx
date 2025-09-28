@@ -2,8 +2,11 @@
 import React from "react";
 import Image from "next/image";
 
-import client from "../assets/c3.png"; // your client image
-import comma from "../../public/comma.svg"; // quotation mark svg
+import { testimonials } from "@/data";
+
+import comma from "../../public/comma.svg";
+
+
 
 const TestmonialSection = () => {
   return (
@@ -20,40 +23,40 @@ const TestmonialSection = () => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-10">
-        {/* Left side - text */}
-        <div className="max-w-2xl">
-          {/* Quotation mark */}
-          <Image
-            src={comma}
-            alt="comma"
-            width={80}
-            height={80}
-            className="mb-6 text-[#C6FF00]"
-          />
+      <div className="flex flex-col gap-20">
+        {testimonials.map((t, index) => (
+          <div
+            key={index}
+            className="flex flex-col md:flex-row justify-between items-center gap-10"
+          >
+            {/* Left side - text */}
+            <div className="max-w-2xl">
+              <Image
+                src={comma}
+                alt="comma"
+                width={80}
+                height={80}
+                className="mb-6 text-[#C6FF00]"
+              />
+              <p className="text-xl font-semibold leading-relaxed">{t.text}</p>
+              <div className="mt-6">
+                <p className="font-bold text-lg">{t.name}</p>
+                <p className="text-gray-400 text-sm">{t.role}</p>
+              </div>
+            </div>
 
-          {/* Testimonial text */}
-          <p className="text-xl font-semibold leading-relaxed">
-            Working with Tahir Mehmood is a fantastic experience. He truly understood our vision and turned our dream home into a reality. The attention to detail and dedication were beyond my imagination
-          </p>
-
-          {/* Author */}
-          <div className="mt-6">
-            <p className="font-bold text-lg">Cameron Williamson</p>
-            <p className="text-gray-400 text-sm">CEO, ISHKON</p>
+            {/* Right side - image */}
+            <div className="shrink-0">
+              <Image
+                src={t.image}
+                alt={t.name}
+                width={300}
+                height={350}
+                className="rounded-lg rotate-0 md:rotate-3 shadow-lg"
+              />
+            </div>
           </div>
-        </div>
-
-        {/* Right side - image */}
-        <div className="shrink-0">
-          <Image
-            src={client}
-            alt="client"
-            width={300}
-            height={350}
-            className="rounded-lg rotate-0 md:rotate-3 shadow-lg"
-          />
-        </div>
+        ))}
       </div>
     </div>
   );
