@@ -2,10 +2,11 @@ import Image from "next/image";
 import React from "react";
 import tahir from "../assets/tahir.jpg";
 import Button from "@/components/Button";
+import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <section className=" mt-20 px-4 md:px-12 lg:px-32">
+    <section className=" px-4 md:px-12 xl:px-32">
       <div>
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
@@ -86,8 +87,10 @@ const AboutSection = () => {
             </div>
 
             {/* Button */}
-            <div className="mt-8 sm:mt-10 flex flex-col justify-center items-center xl:items-start">
+            <div className="py-10 flex justify-center items-center md:justify-start">
+            <Link  href="/about" >
               <Button text="About me" />
+            </Link>
             </div>
           </div>
         </div>

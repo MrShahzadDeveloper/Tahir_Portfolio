@@ -1,13 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import { projects } from "@/data"; // ✅ importing from data.js
+import { projects } from "@/data";
 import Button from "@/components/Button";
 
 const ProjectsSection = () => {
-  // Split projects into 2 columns
-  const leftColumn = projects.filter((_, i) => i % 2 === 0);
-  const rightColumn = projects.filter((_, i) => i % 2 === 1);
+  // ✅ First, slice to only 4 projects
+  const slicedProjects = projects.slice(0, 4);
+
+  // ✅ Then split them into 2 columns
+  const leftColumn = slicedProjects.filter((_, i) => i % 2 === 0);
+  const rightColumn = slicedProjects.filter((_, i) => i % 2 === 1);
 
   return (
     <section className="px-4 md:px-12 lg:px-20 xl:px-32 bg-[#020202] py-12 md:py-16 lg:py-20">
@@ -30,12 +33,16 @@ const ProjectsSection = () => {
         />
       </div>
 
-      {/* Projects Grid - Two staggered columns */}
+      {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {/* Left Column */}
         <div className="flex flex-col gap-6 md:gap-14">
           {leftColumn.map((project) => (
-            <Link key={project.slug} href={`/projects/${project.slug}`} className="group">
+            <Link
+              key={project.slug}
+              href={`/projects/${project.slug}`}
+              className="group"
+            >
               <div className="overflow-hidden relative">
                 <Image
                   width={600}
@@ -76,10 +83,14 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* Right Column (shifted down) */}
-        <div className="flex flex-col gap-6 md:gap-14 mt-20">
+        {/* Right Column (only stagger on desktop) */}
+        <div className="flex flex-col gap-6 md:gap-14 mt-0 md:mt-20">
           {rightColumn.map((project) => (
-            <Link key={project.slug} href={`/projects/${project.slug}`} className="group">
+            <Link
+              key={project.slug}
+              href={`/projects/${project.slug}`}
+              className="group"
+            >
               <div className="overflow-hidden relative">
                 <Image
                   width={600}
@@ -123,7 +134,9 @@ const ProjectsSection = () => {
 
       {/* CTA Button */}
       <div className="mt-12 md:mt-20 flex justify-center">
-        <Button text="All Projects" />
+        <Link href="/projects">
+          <Button text="All Projects" />
+        </Link>
       </div>
     </section>
   );

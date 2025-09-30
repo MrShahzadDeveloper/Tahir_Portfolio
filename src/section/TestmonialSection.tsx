@@ -10,7 +10,7 @@ import comma from "../../public/comma.svg";
 
 const TestmonialSection = () => {
   return (
-    <div className="px-4 md:px-16 lg:px-32 py-16 bg-black text-white">
+    <div className="px-4 md:px-16 xl:px-32 py-16 bg-black text-white">
       {/* Heading */}
       <div className="mb-12">
         <div className="flex items-center gap-3">

@@ -1,8 +1,14 @@
-import BullDogs from "./assets/BullDogs.png"
-import barbr from "./assets/barbr.png"
-import chargers from "./assets/chargers.png"
-import haApp from "./assets/haApp.png"
-import lions from "./assets/loins.png"
+import BullDogs from "./assets/BullDogs.png";
+import barbr from "./assets/barbr.png";
+import chargers from "./assets/chargers.png";
+import haApp from "./assets/haApp.png";
+import lions from "./assets/loins.png";
+import haWeb from "./assets/ha.png";
+import vibe from "./assets/VibeMaching.png";
+import digifootApp from "./assets/DigiFoot.png";
+import mamuApp from "./assets/mamu.png";
+import client4 from "./assets/c4.png";
+import client5 from "./assets/c5.jpeg";
 
 import {
   FaFacebookF,
@@ -11,8 +17,8 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 
-import client1 from "./assets/c1.png";
-import client2 from "./assets/c2.png";
+import client1 from "./assets/c1.jpeg";
+import client2 from "./assets/c2.jpeg";
 import client3 from "./assets/c3.png";
 
 export const services = [
@@ -63,14 +69,30 @@ export const projects = [
     info: {
       client: "Hā Labs",
       category: "HealthTech",
-      completedOn: "August 12, 2024",
-      website: "www.hahealth.ai",
+      completedOn: "August 12, 2025",
+      website: "https://play.google.com/store/apps/details?id=com.ha.accelrate",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/hahealth" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/hahealth" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/hahealth" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@hahealth" },
+      {
+        name: "Facebook",
+        icon: FaFacebookF,
+        link: "https://facebook.com/hahealth",
+      },
+      {
+        name: "Twitter",
+        icon: FaXTwitter,
+        link: "https://twitter.com/hahealth",
+      },
+      {
+        name: "Instagram",
+        icon: FaInstagram,
+        link: "https://instagram.com/hahealth",
+      },
+      {
+        name: "YouTube",
+        icon: FaYoutube,
+        link: "https://youtube.com/@hahealth",
+      },
     ],
   },
   {
@@ -93,104 +115,313 @@ export const projects = [
     info: {
       client: "Barbr Inc.",
       category: "Business Tech",
-      completedOn: "September 20, 2024",
-      website: "www.barbrapp.com",
+      completedOn: "September 20, 2022",
+      website:
+        "https://play.google.com/store/apps/details?id=com.barbrme&hl=en",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/barbrapp" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/barbrapp" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/barbrapp" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@barbrapp" },
+      {
+        name: "Facebook",
+        icon: FaFacebookF,
+        link: "https://facebook.com/barbrapp",
+      },
+      {
+        name: "Twitter",
+        icon: FaXTwitter,
+        link: "https://twitter.com/barbrapp",
+      },
+      {
+        name: "Instagram",
+        icon: FaInstagram,
+        link: "https://instagram.com/barbrapp",
+      },
+      {
+        name: "YouTube",
+        icon: FaYoutube,
+        link: "https://youtube.com/@barbrapp",
+      },
     ],
   },
   {
-    slug: "bulldogs",
-    title: "BullDogs",
+  slug: "bulldogs",
+  title: "AAMU Sports",
+  category: "Sports",
+  para1:
+    "The Official AAMU Sports mobile app is your first stop for all things AAMU Bulldogs! Stay connected with your favorite teams, athletes, and the latest updates. The Official AAMU Sports mobile app is your first stop for all things AAMU Bulldogs! The new mobile app is home for team updates, schedules, tickets, and more!",
+  para2:
+    "The app brings schedules, team news, tickets, and more directly to your fingertips, making it easy for fans to keep up with AAMU Athletics anytime, anywhere.",
+  para3:
+    "Whether you’re at the game or on the go, the AAMU Sports app is designed to keep the Bulldogs community engaged and informed.",
+  description:
+    "Your official home for AAMU Bulldogs schedules, tickets, and team updates.",
+  li1: "Team Updates",
+  li2: "Game Schedules",
+  li3: "Tickets Access",
+  li4: "Fan Engagement",
+  image: BullDogs, // ✅ keep as imported variable, NOT string
+  info: {
+    client: "Alabama A&M University Athletics",
+    category: "Sports",
+    completedOn: "October 2, 2023",
+    website: "https://play.google.com/store/apps/details?id=com.aamubulldogs",
+  },
+  socials: [
+    { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/bulldogsgaming" },
+    { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/bulldogsgaming" },
+    { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/bulldogsgaming" },
+    { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@bulldogsgaming" },
+  ],
+},
+
+{
+  slug: "chargers",
+  title: "UAH Sports",
+  category: "Sports",
+  para1:
+    "The Official UAH Chargers mobile app is your first stop for all things UAH Athletics! Stay connected with your favorite teams, athletes, and the latest updates.",
+  para2:
+    "The app brings schedules, team news, tickets, and more directly to your fingertips, making it easy for fans to keep up with UAH Athletics anytime, anywhere.",
+  para3:
+    "Whether you’re at the game or on the go, the UAH Sports app is designed to keep the Chargers community engaged and informed.",
+  description:
+    "The Official UAH Chargers mobile app is your all-in-one hub for UAH Athletics. " +
+    "Fans can access team updates, game schedules, and tickets right from their phone. " +
+    "Stay connected and engaged with the Chargers community anytime, anywhere.",
+  li1: "Team Updates",
+  li2: "Game Schedules",
+  li3: "Tickets Access",
+  li4: "Fan Engagement",
+  image: chargers,
+  info: {
+    client: "University of Alabama in Huntsville Athletics",
+    category: "Sports",
+    completedOn: "August 29, 2022",
+    website: "https://play.google.com/store/apps/details?id=com.uahchargers",
+  },
+  socials: [
+    { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/chargersapp" },
+    { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/chargersapp" },
+    { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/chargersapp" },
+    { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@chargersapp" },
+  ],
+},
+
+  {
+  slug: "lions",
+  title: "Roar Lions",
+  category: "Sports",
+  para1:
+    "The Roar Lions mobile app is your first stop for all things UNA Athletics! Stay connected with your favorite teams, athletes, and the latest updates.",
+  para2:
+    "The app brings scores, schedules, social media streams, and more directly to your fingertips, making it easy for fans to keep up with UNA Athletics anytime, anywhere.",
+  para3:
+    "Whether you’re at the game or on the go, the Roar Lions app is designed to keep the Lions community engaged and informed.",
+  description:
+    "The Roar Lions app is the official home for UNA Athletics, delivering live scores, schedules, and team updates. " +
+    "Fans can follow their favorite teams, explore social media streams, and access news in one convenient place. " +
+    "Stay connected with UNA Lions wherever you are and never miss a moment of the action.",
+  li1: "Live Scores",
+  li2: "Game Schedules",
+  li3: "Social Media Streams",
+  li4: "Fan Engagement",
+  image: lions, // ✅ imported variable, not string
+  info: {
+    client: "University of North Alabama Athletics",
+    category: "Sports",
+    completedOn: "September 10, 2021",
+    website: "https://play.google.com/store/apps/details?id=com.nivyapp.roarlions",
+  },
+  socials: [
+    { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/lionsnetwork" },
+    { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/lionsnetwork" },
+    { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/lionsnetwork" },
+    { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@lionsnetwork" },
+  ],
+},
+
+  {
+    slug: "ha-web",
+    title: "Ha Health AI",
     category: "Technology",
     para1:
-      "BullDogs is a next-generation eSports and gaming community platform that connects players, fans, and teams. It combines live streaming, competitive match scheduling, and fan engagement into one sleek hub.",
+      "Hā Health is your AI-powered wellness companion, built on evidence-based nutrition and holistic health principles. The app creates affordable meal plans, tracks exercise, and provides mindfulness tools tailored to your lifestyle.",
     para2:
-      "Players can showcase their talent, track stats, and gain visibility, while fans get access to highlights, exclusive content, and live chat interactions with their favorite gamers.",
+      "Whether it’s managing a diet on a budget, staying consistent with workouts, or practicing meditation, Hā adapts to your personal needs. It delivers actionable, AI-personalised insights backed by science and dietitian best practices.",
     para3:
-      "With its gamified approach and modern design, BullDogs is built to push gaming communities forward into the digital future.",
+      "Hā means breath, energy, vitality—empowering you and your family to live healthier, longer lives with smart, adaptive guidance and real-time progress tracking.",
     description:
-      "A modern eSports and gaming hub connecting players and fans with live features.",
-    li1: "Live Streaming",
-    li2: "Competitive Match Hub",
-    li3: "Player Profiles",
-    li4: "Fan Engagement Tools",
-    image: BullDogs,
+      "An AI-powered health and wellness app focused on nutrition, fitness, and mindfulness.",
+    li1: "AI Meal Planning",
+    li2: "Fitness & Mindfulness Tools",
+    li3: "Affordable Nutrition Guidance",
+    li4: "Progress Tracking & Insights",
+    image: haWeb,
     info: {
-      client: "BullDogs Gaming",
-      category: "eSports",
-      completedOn: "October 2, 2024",
-      website: "www.bulldogsgaming.com",
+      client: "Hā Labs",
+      category: "HealthTech",
+      completedOn: "August 12, 2024",
+      website: "https://www.haahealth.com/",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/bulldogsgaming" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/bulldogsgaming" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/bulldogsgaming" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@bulldogsgaming" },
+      {
+        name: "Facebook",
+        icon: FaFacebookF,
+        link: "https://facebook.com/hahealth",
+      },
+      {
+        name: "Twitter",
+        icon: FaXTwitter,
+        link: "https://twitter.com/hahealth",
+      },
+      {
+        name: "Instagram",
+        icon: FaInstagram,
+        link: "https://instagram.com/hahealth",
+      },
+      {
+        name: "YouTube",
+        icon: FaYoutube,
+        link: "https://youtube.com/@hahealth",
+      },
     ],
   },
   {
-    slug: "chargers",
-    title: "Chargers",
-    category: "Technology",
+    slug: "vibe-matching",
+    title: "Vibe Matching",
+    category: "Social Networking",
     para1:
-      "Chargers is a clean-energy mobile app helping EV owners find, book, and pay for charging stations with ease. It’s designed for convenience, speed, and sustainability.",
+      "Vibe Matching is a map-based social networking app that helps people connect in real-time. It lets users explore nearby profiles, send waves, and start conversations instantly—making social networking simple, fun, and engaging.",
     para2:
-      "The app provides real-time availability, cost estimates, and route optimization to ensure drivers always know where their next charge is coming from.",
+      "Whether you’re looking for new friends, casual hangouts, flirty connections, or something more meaningful, Vibe Matching makes meeting nearby people easy, secure, and enjoyable. With its wave-to-connect feature, there’s no need to swipe—just send a wave and start chatting.",
     para3:
-      "By connecting EV drivers to charging infrastructure, Chargers supports the transition to greener, more efficient mobility worldwide.",
+      "Built with privacy in mind, Vibe Matching gives users control over their data while providing an interactive and personalized way to discover people around them.",
     description:
-      "A smart EV charging app with booking, payments, and route optimization.",
-    li1: "Real-time Station Availability",
-    li2: "Seamless Payments",
-    li3: "Route Optimization",
-    li4: "Eco-friendly Mobility",
-    image: chargers,
+      "A real-time, map-based social networking app designed for discovering and connecting with nearby people.",
+    li1: "Interactive Map with Real-Time User Locations",
+    li2: "Wave-to-Connect Matching",
+    li3: "Secure In-App Chat",
+    li4: "Customizable Profiles with Photos & Bio",
+    image: vibe,
     info: {
-      client: "ChargeNet",
-      category: "CleanTech",
-      completedOn: "August 29, 2024",
-      website: "www.chargersapp.com",
+      client: "Vibe Labs",
+      category: "Social Networking",
+      completedOn: "April 5, 2021",
+      website: "https://apps.apple.com/us/app/vibe-matching-app/id6743134828",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/chargersapp" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/chargersapp" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/chargersapp" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@chargersapp" },
+      {
+        name: "Facebook",
+        icon: FaFacebookF,
+        link: "https://facebook.com/vibematching",
+      },
+      {
+        name: "Twitter",
+        icon: FaXTwitter,
+        link: "https://twitter.com/vibematching",
+      },
+      {
+        name: "Instagram",
+        icon: FaInstagram,
+        link: "https://instagram.com/vibematching",
+      },
+      {
+        name: "YouTube",
+        icon: FaYoutube,
+        link: "https://youtube.com/@vibematching",
+      },
     ],
   },
+{
+  slug: "digifoot-scanner",
+  title: "digifoot Scanner App",
+  category: "Health & Technology",
+  para1:
+    "The digifoot Scanner App works together with the digifoot webshop (www.digifoot.de) and allows users to conveniently scan their soles from home to order custom-made and personalized insoles.",
+  para2:
+    "After placing an order in the webshop, the user receives a PIN and a QR code for verification in the app. The feet are then scanned with the TrueDepth camera, a 3D model is created, and the user can review it before uploading.",
+  para3:
+    "The app does not store or transfer any image or video data. Instead, it creates a point cloud or mesh model and only transmits it to the servers with the user’s explicit consent to produce the customized insoles.",
+  description:
+    "A 3D scanner app for custom insoles, seamlessly integrated with the digifoot website.",
+  li1: "Easy ordering with PIN & QR code",
+  li2: "TrueDepth-powered 3D foot scan",
+  li3: "Privacy-friendly – no image storage",
+  li4: "Custom insoles delivered within days",
+  image: digifootApp, // ✅ replace with your imported image variable
+  info: {
+    client: "digifoot",
+    category: "HealthTech",
+    completedOn: "02 October 2021",
+    website: "https://apps.apple.com/us/app/digifoot/id1600893181",
+  },
+  socials: [
+    {
+      name: "Facebook",
+      icon: FaFacebookF,
+      link: "https://facebook.com/digifoot",
+    },
+    {
+      name: "Twitter",
+      icon: FaXTwitter,
+      link: "https://twitter.com/digifoot",
+    },
+    {
+      name: "Instagram",
+      icon: FaInstagram,
+      link: "https://instagram.com/digifoot",
+    },
+    {
+      name: "YouTube",
+      icon: FaYoutube,
+      link: "https://youtube.com/@digifoot",
+    },
+  ],
+},
+
   {
-    slug: "lions",
-    title: "Lions",
-    category: "Technology",
+    slug: "mamu-app",
+    title: "Mamu",
+    category: "Music & Entertainment",
     para1:
-      "Lions is an AI-driven social platform built for creative professionals. From designers to developers, it helps creators showcase portfolios, collaborate, and grow their networks.",
+      "Mamu is an innovative app designed to enhance live music experiences for DJs and fans. DJs can create and manage events, showcase their unique style, and engage directly with their audience.",
     para2:
-      "The app intelligently recommends collaborations, events, and opportunities based on each user’s skills and career goals.",
+      "The app features real-time voting, allowing users to vote for their favorite songs as they’re played. This interactive element lets the audience influence the playlist, ensuring top-voted tracks get played live.",
     para3:
-      "Lions empowers the creative community with tools that help professionals grow faster while staying inspired.",
+      "With an intuitive interface, fans can browse events, follow their favorite DJs, and discover new music, while DJs gain valuable insights into audience preferences for impactful performances.",
     description:
-      "A social collaboration platform for creative professionals and innovators.",
-    li1: "Portfolio Showcasing",
-    li2: "AI Collaboration Matching",
-    li3: "Career Opportunities",
-    li4: "Community Building",
-    image: lions,
+      "An interactive live music app where DJs host events and fans vote in real time to shape the playlist.",
+    li1: "DJ Event Creation & Management",
+    li2: "Real-Time Song Voting",
+    li3: "Fan-DJ Interaction & Community Building",
+    li4: "Audience Insights for DJs",
+    image: mamuApp, // ✅ replace with your imported image variable
     info: {
-      client: "Lions Network",
-      category: "SocialTech",
-      completedOn: "September 10, 2024",
-      website: "www.lionsnetwork.com",
+      client: "Mamu Labs",
+      category: "MusicTech",
+      completedOn: "04 November 2020",
+      website: "https://apps.apple.com/us/app/mamu/id6736948723",
     },
     socials: [
-      { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/lionsnetwork" },
-      { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/lionsnetwork" },
-      { name: "Instagram", icon: FaInstagram, link: "https://instagram.com/lionsnetwork" },
-      { name: "YouTube", icon: FaYoutube, link: "https://youtube.com/@lionsnetwork" },
+      {
+        name: "Facebook",
+        icon: FaFacebookF,
+        link: "https://facebook.com/mamuapp",
+      },
+      {
+        name: "Twitter",
+        icon: FaXTwitter,
+        link: "https://twitter.com/mamuapp",
+      },
+      {
+        name: "Instagram",
+        icon: FaInstagram,
+        link: "https://instagram.com/mamuapp",
+      },
+      {
+        name: "YouTube",
+        icon: FaYoutube,
+        link: "https://youtube.com/@mamuapp",
+      },
     ],
   },
 ];
@@ -220,42 +451,60 @@ export const projectFaqs = [
 
 export const testimonials = [
   {
-    text: "Working with Tahir Mehmood is a fantastic experience. He truly understood our vision and turned our dream home into a reality. The attention to detail and dedication were beyond my imagination",
-    name: "Cameron Williamson",
-    role: "CEO, ISHKON",
+    text: "Working with Tahir on the Hā Health AI app was an amazing experience. He perfectly captured our vision of combining wellness, nutrition, and mindfulness into a seamless app. The design and functionality exceeded our expectations.",
+    name: "Sarah Mitchell",
+    role: "Founder, Hā Labs",
+    image: client4,
+  },
+  {
+    text: "Tahir built the UNA Charger app for our college tournaments, and it has completely changed how we organize events. From team registrations to match updates, everything runs smoothly now. His dedication made this project a huge success.",
+    name: "Imran Haider",
+    role: "Sports Coordinator",
+    image: client3,
+  },
+  {
+    text: "The Barbr app turned out exactly how we imagined—simple, intuitive, and powerful for managing barber appointments. Tahir’s ability to translate our business needs into a user-friendly app was outstanding.",
+    name: "Robert Fox",
+    role: "Owner, Barbr Studios",
+    image: client5,
+  },
+  {
+    text: "Vibe Matching was a challenging idea, but Tahir delivered it brilliantly. The interactive features and clean UI make connecting people seamless. His creativity and technical expertise really shone through.",
+    name: "Sophia Khan",
+    role: "Product Lead, Vibe",
     image: client1,
   },
   {
-    text: "Collaborating with Tahir Mehmood has been nothing short of incredible. He listened carefully to our requirements and delivered results that exceeded our expectations. The professionalism and creativity shown throughout the process made the entire journey smooth and enjoyable.",
-    name: "Jenny Wilson",
-    role: "Marketing Head, Globex",
+    text: "With the Digifoot scanner app, Tahir helped us bring advanced 3D foot scanning technology to our customers. The integration with our webshop was flawless, and the app performs with precision. A real game-changer for our business.",
+    name: "James Anderson",
+    role: "CEO, Digifoot",
     image: client2,
   },
-  {
-    text: "Tahir Mehmood transformed our ideas into something extraordinary. The level of commitment and precision he brought to the project was outstanding. Every detail was carefully handled, and the final outcome was more than we could have hoped for.",
-    name: "Robert Fox",
-    role: "Founder, Starto",
-    image: client3,
-  },
+  // {
+  //   text: "Mamu Entertainment redefined live DJ events for us. Thanks to Tahir, fans can now vote on songs in real time and DJs can adjust instantly. His innovative approach created an unforgettable experience for music lovers.",
+  //   name: "Ayesha Malik",
+  //   role: "Head of Marketing, Mamu",
+  //   image: client6,
+  // },
 ];
 
 export const workProcess = [
-    {
-      icon: "/workProcess1.svg",
-      title: "Discovery & Research",
-      description:
-        "We start by getting to know your business, your goals, and your target audience. Through in-depth research and analysis, we gather valuable insights that inform.",
-    },
-    {
-      icon: "/workProcess2.avif",
-      title: "Strategy & Planning",
-      description:
-        "Based on our research, we develop a comprehensive strategy and detailed project plan. This includes setting clear goals, defining key performance indicators.",
-    },
-    {
-      icon: "/workProcess3.svg",
-      title: "Implementation & Deploy",
-      description:
-        "We start by delivering the results and taking feedback. Through in-depth research and analysis, we gather valuable feedback that shapes the output.",
-    },
-  ];
+  {
+    icon: "/workProcess1.svg",
+    title: "Discovery & Research",
+    description:
+      "We start by getting to know your business, your goals, and your target audience. Through in-depth research and analysis, we gather valuable insights that inform.",
+  },
+  {
+    icon: "/workProcess2.avif",
+    title: "Strategy & Planning",
+    description:
+      "Based on our research, we develop a comprehensive strategy and detailed project plan. This includes setting clear goals, defining key performance indicators.",
+  },
+  {
+    icon: "/workProcess3.svg",
+    title: "Implementation & Deploy",
+    description:
+      "We start by delivering the results and taking feedback. Through in-depth research and analysis, we gather valuable feedback that shapes the output.",
+  },
+];

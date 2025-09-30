@@ -5,6 +5,10 @@ import Circle from "@/components/Circle";
 import ProjectDetailCircle from "@/components/ProjectDetailCircle";
 import { MdCheck } from "react-icons/md";
 import ProjectDetailAccordion from "@/components/ProjectDetailAccordian";
+import Link from "next/link";
+import googlePlay from "../../../assets/googlepaly.png";
+import { div } from "framer-motion/client";
+import HeroHeader from "@/components/Header";
 
 const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
   const project = projects.find((p) => p.slug === params.slug);
@@ -15,53 +19,16 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <section className="flex flex-col justify-center items-center relative px-4 md:px-16 lg:px-32 min-h-[80vh] bg-[url('/bg-grid.svg')] bg-no-repeat bg-left bg-contain">
-        {/* Circle on the left */}
-        <div className="absolute left-[-60px] top-[95%] -translate-y-1/2 -z-10 pointer-events-none">
-          <Circle />
-        </div>
+      {/* Hero Section */}
+          <HeroHeader
+        introText="Detailed Presentation"
+        heading1="Project"
+        heading2="Detail"
+      />
 
-        {/* Content */}
-        <div className="relative z-10">
-          {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mb-4">
-            <h3 className="font-bold text-lg sm:text-xl text-white text-center sm:text-left">
-              Detail Presentation
-            </h3>
-            <hr className="hidden sm:block w-[80px] border-[#575757]" />
-          </div>
-          {/* Project */}
-          <div className="flex ">
-            <div>
-              <div className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-5">
-                <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[150px] text-white font-bold uppercase leading-none">
-                  Project
-                </h1>
-              </div>
-
-              {/* Details */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
-                <Image
-                  width={350}
-                  height={80}
-                  className="w-28 h-8 sm:w-40 sm:h-10 md:w-60 md:h-14 lg:w-[350px] lg:h-[80px] mt-4 sm:mt-0"
-                  src="/rings.svg"
-                  alt="rings"
-                />
-                <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[150px] text-white font-bold uppercase leading-none">
-                  Details
-                </h1>
-              </div>
-            </div>
-            <div>
-              <ProjectDetailCircle />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full h-[800px] relative overflow-hidden">
-        <div className="absolute inset-0 transform -translate-y-10 shadow-2xl">
+      {/* Banner Image */}
+      <section className="w-full h-[300px] sm:h-[450px] md:h-[600px] lg:h-[750px] relative overflow-hidden">
+        <div className="absolute inset-0 shadow-2xl">
           <Image
             src={project.image}
             alt={project.title}
@@ -71,16 +38,19 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
           />
         </div>
 
-        {/* Gradient overlay → bright top, shadow bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
       </section>
 
-      <section className="mt-8 mb-20 px-4 md:px-16 lg:px-32 flex gap-14">
+      {/* Project Details + Info */}
+      <section className="mt-8 mb-20 px-4 md:px-16 xl:px-32 flex flex-col lg:flex-row gap-14">
         {/* Left Side */}
-        <div className="max-w-3xl">
+        <div className="w-full lg:w-2/3 max-w-3xl">
           <div>
-            <h3 className="text-lg text-[#D8D8D8] mb-3">{project.category}</h3>
-            <h1 className="text-white text-5xl font-semibold">
+            <h3 className="text-base sm:text-lg text-[#D8D8D8] mb-3">
+              {project.category}
+            </h3>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">
               {project.title}
             </h1>
           </div>
@@ -88,40 +58,34 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
 
           <div>
             <p className="text-[#D8D8D8] mb-8">{project.para1}</p>
-            <div className=" flex gap-5">
-              <div className="w-[400px] h-[300px] relative overflow-hidden">
+
+            {/* Image + Bullet Points */}
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="w-full md:w-1/2 h-[220px] sm:h-[280px] md:h-[300px] relative overflow-hidden rounded-lg">
                 <Image
                   src={project.image}
                   alt={`${project.title} Image`}
                   fill
-                  className="object-cover object-top" // 👈 show from the top (or object-left)
+                  className="object-cover object-top"
                 />
               </div>
 
-              <div className="text-[#D8D8D8] flex flex-col justify-center">
-                <p className="mb-3 max-w-[340px]">{project.para2}</p>
-                <ul>
-                  <li className="flex items-center gap-1">
-                    <MdCheck size={22} color="#C9F31D" />
-                    <h3>{project.li1}</h3>
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <MdCheck size={22} color="#C9F31D" />
-                    <h3>{project.li2}</h3>
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <MdCheck size={22} color="#C9F31D" />
-                    <h3>{project.li3}</h3>
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <MdCheck size={22} color="#C9F31D" />
-                    <h3>{project.li4}</h3>
-                  </li>
+              <div className="text-[#D8D8D8] flex flex-col justify-center w-full md:w-1/2">
+                <p className="mb-3">{project.para2}</p>
+                <ul className="space-y-2">
+                  {[project.li1, project.li2, project.li3, project.li4].map(
+                    (item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <MdCheck size={22} color="#C9F31D" />
+                        <h3>{item}</h3>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
 
-            <p className="text-[#D8D8D8] mt-8 ">{project.para3}</p>
+            <p className="text-[#D8D8D8] mt-8">{project.para3}</p>
 
             <div className="mt-10 flex justify-center">
               <ProjectDetailAccordion />
@@ -130,25 +94,49 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
         </div>
 
         {/* Right Side */}
-        <div className="text-white pt-10">
-          <h2 className="text-4xl font-bold mb-6">Project Information</h2>
+        <div className="w-full lg:w-1/3 text-white pt-6 lg:pt-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+            Project Information
+          </h2>
 
           {/* Info Grid */}
           <div className="grid grid-cols-1 gap-6">
             {Object.entries(project.info).map(([key, value]) => (
               <div key={key}>
-                <h4 className="text-[#D8D8D8] text-lg capitalize">
-                  {key.replace(/([A-Z])/g, " $1")}:
-                </h4>
-                <h1 className="text-2xl font-medium">{value}</h1>
+                {/* For normal fields */}
+                {key.toLowerCase() !== "website" ? (
+                  <>
+                    <h4 className="text-[#D8D8D8] text-base sm:text-lg capitalize">
+                      {key.replace(/([A-Z])/g, " $1")}:
+                    </h4>
+                    <h1 className="text-xl sm:text-2xl font-medium">{value}</h1>
+                  </>
+                ) : (
+                  /* For website field → show Google Play button instead of raw URL */
+                  <Link
+                    href={value as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Image
+                      src={googlePlay}
+                      alt="Get it on Google Play"
+                      width={140}
+                      height={50}
+                    />
+                  </Link>
+                )}
               </div>
             ))}
           </div>
 
           {/* Share On */}
           <div className="mt-8">
-            <h4 className="text-[#D8D8D8] text-lg mb-3">Share On:</h4>
-            <div className="flex gap-4">
+            <h4 className="text-[#D8D8D8] text-base sm:text-lg mb-3">
+              Share On:
+            </h4>
+            <div className="flex gap-3 flex-wrap">
               {project.socials?.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -157,9 +145,9 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 "
+                    className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#C9F31D] hover:text-black transition"
                   >
-                    <Icon className="text-lg" />
+                    <Icon className="text-base sm:text-lg" />
                   </a>
                 );
               })}
