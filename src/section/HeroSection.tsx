@@ -6,11 +6,22 @@ import Button from "@/components/Button";
 import bg from "../assets/bg.avif";
 import Circle from "@/components/Circle";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
+
+// ✅ Properly typed variants
+const textVariants: Variants = {
+  hidden: { y: 50, opacity: 0 },
+  visible: (custom: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2, duration: 0.6, ease: "easeOut" },
+  }),
+};
 
 const HeroSection = () => {
   return (
     <section className="relative w-full h-[70vh] sm:h-screen flex items-center px-4 sm:px-8 md:px-16 xl:px-32 sm:pt-24 text-white bg-[url('/bg-grid.svg')] bg-no-repeat bg-left bg-contain overflow-hidden pb-8 md:pb-20">
-      {/* Glowing Circle (half visible on left) */}
+      {/* Glowing Circle */}
       <div className="absolute left-[-100px] top-[40%] -translate-y-1/2 -z-10 pointer-events-none">
         <Circle />
       </div>
@@ -18,16 +29,22 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 ">
         {/* Intro text */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mb-4">
+        <motion.div
+          className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mb-4"
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+          custom={0}
+        >
           <h3 className="font-bold text-sm sm:text-xl text-center sm:text-left">
             Hey There! Tahir Mehmood
           </h3>
           <hr className="hidden sm:block w-[80px] border-[#575757]" />
-        </div>
+        </motion.div>
 
-        {/* Hero Title with BG behind */}
+        {/* Hero Title with BG */}
         <div className="relative flex flex-col gap-6 sm:gap-10">
-          {/* Background image BEHIND text */}
+          {/* Background image */}
           <div className="absolute sm:-right-[100px] top-[90%] sm:top-[70%] -translate-y-1/2 -z-10 opacity-70 pointer-events-none">
             <Image
               src={bg}
@@ -36,60 +53,101 @@ const HeroSection = () => {
               height={600}
               priority
               unoptimized
-              className="object-contain w-[300] h-[300] sm:w-[600] sm:h-[600] "
+              className="object-contain w-[300] h-[300] sm:w-[600] sm:h-[600]"
             />
           </div>
 
           {/* Titles */}
           <div>
             <div className="flex justify-center sm:justify-start gap-3 sm:items-end sm:gap-6 sm:mb-5">
-              <span className="text-2xl sm:text-6xl xl:text-[75px] border-b font-bold text-[#C9F31D] leading-none mb-2 sm:mb-3 w-fit flex justify-center sm:justify-end items-end">
+              <motion.span
+                custom={1}
+                initial="hidden"
+                animate="visible"
+                variants={textVariants}
+                className="text-2xl sm:text-6xl xl:text-[75px] border-b font-bold text-[#C9F31D] leading-none mb-2 sm:mb-3 w-fit flex justify-center sm:justify-end items-end"
+              >
                 Senior
-              </span>
+              </motion.span>
 
-              <h1 className="text-5xl sm:text-7xl xl:text-[150px] font-bold uppercase leading-none relative z-10">
+              <motion.h1
+                custom={2}
+                initial="hidden"
+                animate="visible"
+                variants={textVariants}
+                className="text-5xl sm:text-7xl xl:text-[150px] font-bold uppercase leading-none relative z-10"
+              >
                 App
-              </h1>
-              <Image
-                src="/star.svg"
-                alt="star"
-                width={120}
-                height={120}
-                className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 lg:w-[120px] lg:h-[120px] mt-1 sm:mt-0 "
-              />
+              </motion.h1>
+
+              {/* ✅ Slow rotating star */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+              >
+                <Image
+                  src="/star.svg"
+                  alt="star"
+                  width={120}
+                  height={120}
+                  className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 lg:w-[120px] lg:h-[120px] mt-1 sm:mt-0"
+                />
+              </motion.div>
             </div>
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 relative z-10">
-              <Image
-                src="/rings.svg"
-                alt="rings"
-                width={350}
-                height={80}
-                className="hidden sm:block w-28 h-8 sm:w-40 sm:h-10 md:w-60 md:h-14 lg:w-[350px] lg:h-[80px] mt-4 sm:mt-0"
-              />
+              {/* ✅ Rings float on x + y axis */}
+              <motion.div
+                animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <Image
+                  src="/rings.svg"
+                  alt="rings"
+                  width={350}
+                  height={80}
+                  className="hidden sm:block w-28 h-8 sm:w-40 sm:h-10 md:w-60 md:h-14 lg:w-[350px] lg:h-[80px] mt-4 sm:mt-0"
+                />
+              </motion.div>
 
-              <h1 className="text-5xl text-center sm:text-start sm:text-7xl  xl:text-[150px] font-bold uppercase leading-none">
+              <motion.h1
+                custom={3}
+                initial="hidden"
+                animate="visible"
+                variants={textVariants}
+                className="text-5xl text-center sm:text-start sm:text-7xl  xl:text-[150px] font-bold uppercase leading-none"
+              >
                 Developer
-              </h1>
+              </motion.h1>
             </div>
           </div>
 
           {/* Paragraph */}
-
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-lg md:max-w-2xl text-[#D2D2D2] mt-6 sm:mt-0 text-center sm:text-left relative z-10">
+          <motion.p
+            custom={4}
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-lg md:max-w-2xl text-[#D2D2D2] mt-6 sm:mt-0 text-center sm:text-left relative z-10"
+          >
             I believe in the power of innovation and creativity to transform
             your ideas into exceptional digital experiences. Working closely
             with you, I strive to bring your vision to life.
-          </p>
+          </motion.p>
         </div>
 
         {/* CTA Button */}
-        <div className="py-10">
-        <Link href="/contact">
-          <Button text="LET'S TALK" />
-        </Link>
-
-        </div>
+        <motion.div
+          custom={5}
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+          className="py-10"
+        >
+          <Link href="/contact">
+            <Button text="LET'S TALK" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,26 +1,60 @@
+"use client";
+
+import * as React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { projects } from "@/data";
-import Circle from "@/components/Circle";
-import ProjectDetailCircle from "@/components/ProjectDetailCircle";
 import { MdCheck } from "react-icons/md";
 import ProjectDetailAccordion from "@/components/ProjectDetailAccordian";
 import Link from "next/link";
 import googlePlay from "../../../assets/googlepaly.png";
-import { div } from "framer-motion/client";
 import HeroHeader from "@/components/Header";
 
-const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
-  const project = projects.find((p) => p.slug === params.slug);
+import { motion, Variants } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+// ✅ Animation Variants
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const ProjectDetailPage = ({ params }: { params: Promise<{ slug: string }> }) => {
+  // ✅ unwrap the promise
+  const { slug } = React.use(params);
+
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
 
+  // ✅ inView hooks for scroll-triggered animations
+  const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
     <>
       {/* Hero Section */}
-          <HeroHeader
+      <HeroHeader
         introText="Detailed Presentation"
         heading1="Project"
         heading2="Detail"
@@ -45,65 +79,88 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
       {/* Project Details + Info */}
       <section className="mt-8 mb-20 px-4 md:px-16 xl:px-32 flex flex-col lg:flex-row gap-14">
         {/* Left Side */}
-        <div className="w-full lg:w-2/3 max-w-3xl">
-          <div>
+        <motion.div
+          ref={ref1}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView1 ? "show" : "hidden"}
+          className="w-full lg:w-2/3 max-w-3xl"
+        >
+          <motion.div variants={itemVariants}>
             <h3 className="text-base sm:text-lg text-[#D8D8D8] mb-3">
               {project.category}
             </h3>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">
               {project.title}
             </h1>
-          </div>
-          <hr className="hidden sm:block w-full my-8 border-[#575757]" />
+          </motion.div>
 
-          <div>
+          <motion.hr
+            variants={itemVariants}
+            className="hidden sm:block w-full my-8 border-[#575757]"
+          />
+
+          <motion.div variants={itemVariants}>
             <p className="text-[#D8D8D8] mb-8">{project.para1}</p>
+          </motion.div>
 
-            {/* Image + Bullet Points */}
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="w-full md:w-1/2 h-[220px] sm:h-[280px] md:h-[300px] relative overflow-hidden rounded-lg">
-                <Image
-                  src={project.image}
-                  alt={`${project.title} Image`}
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-
-              <div className="text-[#D8D8D8] flex flex-col justify-center w-full md:w-1/2">
-                <p className="mb-3">{project.para2}</p>
-                <ul className="space-y-2">
-                  {[project.li1, project.li2, project.li3, project.li4].map(
-                    (item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <MdCheck size={22} color="#C9F31D" />
-                        <h3>{item}</h3>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
+          {/* Image + Bullet Points */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col md:flex-row gap-6"
+          >
+            <div className="w-full md:w-1/2 h-[220px] sm:h-[280px] md:h-[300px] relative overflow-hidden rounded-lg">
+              <Image
+                src={project.image}
+                alt={`${project.title} Image`}
+                fill
+                className="object-cover object-top"
+              />
             </div>
 
-            <p className="text-[#D8D8D8] mt-8">{project.para3}</p>
-
-            <div className="mt-10 flex justify-center">
-              <ProjectDetailAccordion />
+            <div className="text-[#D8D8D8] flex flex-col justify-center w-full md:w-1/2">
+              <p className="mb-3">{project.para2}</p>
+              <ul className="space-y-2">
+                {[project.li1, project.li2, project.li3, project.li4].map(
+                  (item, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <MdCheck size={22} color="#C9F31D" />
+                      <h3>{item}</h3>
+                    </li>
+                  )
+                )}
+              </ul>
             </div>
-          </div>
-        </div>
+          </motion.div>
+
+          <motion.p variants={itemVariants} className="text-[#D8D8D8] mt-8">
+            {project.para3}
+          </motion.p>
+
+          <motion.div variants={itemVariants} className="mt-10 flex justify-center">
+            <ProjectDetailAccordion />
+          </motion.div>
+        </motion.div>
 
         {/* Right Side */}
-        <div className="w-full lg:w-1/3 text-white pt-6 lg:pt-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+        <motion.div
+          ref={ref2}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView2 ? "show" : "hidden"}
+          className="w-full lg:w-1/3 text-white pt-6 lg:pt-10"
+        >
+          <motion.h2
+            variants={itemVariants}
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6"
+          >
             Project Information
-          </h2>
+          </motion.h2>
 
           {/* Info Grid */}
           <div className="grid grid-cols-1 gap-6">
             {Object.entries(project.info).map(([key, value]) => (
-              <div key={key}>
-                {/* For normal fields */}
+              <motion.div key={key} variants={itemVariants}>
                 {key.toLowerCase() !== "website" ? (
                   <>
                     <h4 className="text-[#D8D8D8] text-base sm:text-lg capitalize">
@@ -112,7 +169,6 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
                     <h1 className="text-xl sm:text-2xl font-medium">{value}</h1>
                   </>
                 ) : (
-                  /* For website field → show Google Play button instead of raw URL */
                   <Link
                     href={value as string}
                     target="_blank"
@@ -127,12 +183,12 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
                     />
                   </Link>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Share On */}
-          <div className="mt-8">
+          <motion.div variants={itemVariants} className="mt-8">
             <h4 className="text-[#D8D8D8] text-base sm:text-lg mb-3">
               Share On:
             </h4>
@@ -152,8 +208,8 @@ const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
                 );
               })}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     </>
   );
