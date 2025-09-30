@@ -8,6 +8,7 @@ import { MdCheck } from "react-icons/md";
 import ProjectDetailAccordion from "@/components/ProjectDetailAccordian";
 import Link from "next/link";
 import googlePlay from "../../../assets/googlepaly.png";
+import appstore from "../../../assets/appStore.png"; // ✅ App Store badge
 import HeroHeader from "@/components/Header";
 
 import { motion, Variants } from "framer-motion";
@@ -38,7 +39,7 @@ const itemVariants: Variants = {
 };
 
 const ProjectDetailPage = ({ params }: { params: Promise<{ slug: string }> }) => {
-  // ✅ unwrap the promise
+  // ✅ unwrap params using React.use()
   const { slug } = React.use(params);
 
   const project = projects.find((p) => p.slug === slug);
@@ -137,7 +138,10 @@ const ProjectDetailPage = ({ params }: { params: Promise<{ slug: string }> }) =>
             {project.para3}
           </motion.p>
 
-          <motion.div variants={itemVariants} className="mt-10 flex justify-center">
+          <motion.div
+            variants={itemVariants}
+            className="mt-10 flex justify-center"
+          >
             <ProjectDetailAccordion />
           </motion.div>
         </motion.div>
@@ -159,18 +163,27 @@ const ProjectDetailPage = ({ params }: { params: Promise<{ slug: string }> }) =>
 
           {/* Info Grid */}
           <div className="grid grid-cols-1 gap-6">
-            {Object.entries(project.info).map(([key, value]) => (
-              <motion.div key={key} variants={itemVariants}>
-                {key.toLowerCase() !== "website" ? (
-                  <>
-                    <h4 className="text-[#D8D8D8] text-base sm:text-lg capitalize">
-                      {key.replace(/([A-Z])/g, " $1")}:
-                    </h4>
-                    <h1 className="text-xl sm:text-2xl font-medium">{value}</h1>
-                  </>
-                ) : (
+            {Object.entries(project.info).map(([key, value]) => {
+              // ✅ skip website, handle stores separately
+              if (key.toLowerCase() === "website") return null;
+              if (key.toLowerCase() === "googlestore" || key.toLowerCase() === "appstore") return null;
+
+              return (
+                <motion.div key={key} variants={itemVariants}>
+                  <h4 className="text-[#D8D8D8] text-base sm:text-lg capitalize">
+                    {key.replace(/([A-Z])/g, " $1")}:
+                  </h4>
+                  <h1 className="text-xl sm:text-2xl font-medium">{value}</h1>
+                </motion.div>
+              );
+            })}
+
+            {/* ✅ App / Play Store Badges */}
+            {(project.info.googleStore || project.info.appStore) && (
+              <motion.div variants={itemVariants} className="flex gap-4 items-center">
+                {project.info.googleStore && (
                   <Link
-                    href={value as string}
+                    href={project.info.googleStore as string}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block"
@@ -183,8 +196,23 @@ const ProjectDetailPage = ({ params }: { params: Promise<{ slug: string }> }) =>
                     />
                   </Link>
                 )}
+                {project.info.appStore && (
+                  <Link
+                    href={project.info.appStore as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Image
+                      src={appstore}
+                      alt="Download on the App Store"
+                      width={140}
+                      height={50}
+                    />
+                  </Link>
+                )}
               </motion.div>
-            ))}
+            )}
           </div>
 
           {/* Share On */}

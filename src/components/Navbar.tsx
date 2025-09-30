@@ -29,6 +29,12 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);
 
+  // ✅ helper to close menu after clicking a link
+  const handleLinkClick = () => {
+    setMobileOpen(false);
+    setDropdownOpen(false);
+  };
+
   return (
     <nav className="w-full bg-black text-white px-4 md:px-16 xl:px-32 py-4 flex items-center justify-between relative z-50 shadow-md">
       {/* Logo */}
@@ -122,6 +128,7 @@ export default function Navbar() {
           <Link
             key={item.name}
             href={item.href}
+            onClick={handleLinkClick} // ✅ close menu on click
             className={`relative cursor-pointer group ${
               pathname === item.href ? "text-[#C9F31D]" : "hover:text-[#C9F31D]"
             }`}
@@ -157,6 +164,7 @@ export default function Navbar() {
               <li key={item.name}>
                 <Link
                   href={item.href}
+                  onClick={handleLinkClick} // ✅ close menu on click
                   className={`px-4 py-2 rounded-md transition block ${
                     pathname === item.href
                       ? "bg-[#C9F31D] text-black"
@@ -173,6 +181,7 @@ export default function Navbar() {
         {/* Contact Button (Mobile) */}
         <Link
           href="/contact"
+          onClick={handleLinkClick} // ✅ close menu on click
           className="relative overflow-hidden px-6 py-3 font-semibold flex items-center gap-2 rounded-sm transition text-black bg-[#C9F31D] group mb-4"
         >
           <span className="relative z-10 flex items-center gap-2">
