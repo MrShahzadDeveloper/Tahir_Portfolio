@@ -1,5 +1,8 @@
+"use client";
+
 import { FiSearch, FiPenTool, FiCode, FiSend } from "react-icons/fi";
 import React from "react";
+import { motion, Variants } from "framer-motion";
 
 const services = [
   {
@@ -28,20 +31,30 @@ const services = [
   },
 ];
 
+// Individual card variants
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const ServiceCards = () => {
   return (
-    <section className="grid grid-cols-1 gap-6 mt-12 ">
+    <section className="grid grid-cols-1 gap-6 mt-12">
       {services.map((service, index) => (
-        <div
+        <motion.div
           key={index}
           className="bg-[#111] border border-gray-800 rounded-lg p-6 hover:border-[#C9F31D] transition-all group shadow-md"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={cardVariants}
         >
           <div className="mb-4">{service.icon}</div>
           <h3 className="text-lg font-semibold text-white group-hover:text-[#C9F31D] transition">
             {service.title}
           </h3>
           <p className="text-sm text-gray-400 mt-2">{service.description}</p>
-        </div>
+        </motion.div>
       ))}
     </section>
   );

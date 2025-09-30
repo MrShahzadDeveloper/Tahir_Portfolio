@@ -21,7 +21,7 @@ export default function Navbar() {
   const dropdownMenu = [
     { name: "Home", href: "/" },
     { name: "Contact", href: "/contact" },
-    { name: "Portfolio", href: "/portfolio" },
+    { name: "Projects", href: "/projects" },
   ];
 
   // Prevent body scroll when mobile menu is open
