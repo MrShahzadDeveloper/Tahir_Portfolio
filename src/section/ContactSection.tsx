@@ -1,9 +1,10 @@
 import Button from '@/components/Button'
+import Link from 'next/link'
 import React from 'react'
 
 const ContactSection = () => {
   return (
-    <div className="px-4 md:px-16 lg:px-32 my-20 flex flex-col justify-center items-center text-white text-center">
+    <div className="px-4 md:px-16 xl:px-32 my-20 flex flex-col justify-center items-center text-white text-center">
       {/* Heading */}
       <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl xl:text-[10rem] font-extrabold text-[#C9F31D] leading-tight">
         Let’s Talk
@@ -16,7 +17,9 @@ const ContactSection = () => {
 
       {/* Button */}
       <div className="py-10">
-        <Button text="Contact Me" />
+        <Link href={"/contact"} >
+         <Button text="Contact Me" />
+        </Link>
       </div>
     </div>
   )

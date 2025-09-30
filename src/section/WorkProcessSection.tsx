@@ -6,7 +6,7 @@ import { workProcess } from "@/data";
 const WorkProcessSection = () => {
   return (
     <div>
-      <section className="py-16 sm:py-20 bg-black text-white px-4 sm:px-8 md:px-16 xl:px-32">
+      <section className="py-16 sm:py-20 bg-black text-white  px-4 sm:px-8 md:px-16 xl:px-32">
         {/* Section Header */}
         <div className="mb-10">
           <div className="flex items-center gap-3">

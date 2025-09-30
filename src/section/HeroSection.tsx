@@ -5,12 +5,11 @@ import Image from "next/image";
 import Button from "@/components/Button";
 import bg from "../assets/bg.avif";
 import Circle from "@/components/Circle";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section
-      className="relative w-full h-[70vh] sm:h-screen flex items-center px-4 sm:px-8 md:px-16 lg:px-32 sm:pt-24 text-white bg-[url('/bg-grid.svg')] bg-no-repeat bg-left bg-contain overflow-hidden"
-    >
+    <section className="relative w-full h-[70vh] sm:h-screen flex items-center px-4 sm:px-8 md:px-16 xl:px-32 sm:pt-24 text-white bg-[url('/bg-grid.svg')] bg-no-repeat bg-left bg-contain overflow-hidden pb-8 md:pb-20">
       {/* Glowing Circle (half visible on left) */}
       <div className="absolute left-[-100px] top-[40%] -translate-y-1/2 -z-10 pointer-events-none">
         <Circle />
@@ -44,11 +43,11 @@ const HeroSection = () => {
           {/* Titles */}
           <div>
             <div className="flex justify-center sm:justify-start gap-3 sm:items-end sm:gap-6 sm:mb-5">
-              <span className="text-xl sm:text-6xl md:text-7xl lg:text-[75px] border-b font-bold text-[#C9F31D] leading-none mb-2 sm:mb-3 w-fit flex justify-center sm:justify-end items-end">
+              <span className="text-2xl sm:text-6xl xl:text-[75px] border-b font-bold text-[#C9F31D] leading-none mb-2 sm:mb-3 w-fit flex justify-center sm:justify-end items-end">
                 Senior
               </span>
 
-              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[150px] font-bold uppercase leading-none relative z-10">
+              <h1 className="text-5xl sm:text-7xl xl:text-[150px] font-bold uppercase leading-none relative z-10">
                 App
               </h1>
               <Image
@@ -69,7 +68,7 @@ const HeroSection = () => {
                 className="hidden sm:block w-28 h-8 sm:w-40 sm:h-10 md:w-60 md:h-14 lg:w-[350px] lg:h-[80px] mt-4 sm:mt-0"
               />
 
-              <h1 className="text-5xl text-center sm:text-start sm:text-7xl md:text-8xl lg:text-[150px] font-bold uppercase leading-none">
+              <h1 className="text-5xl text-center sm:text-start sm:text-7xl  xl:text-[150px] font-bold uppercase leading-none">
                 Developer
               </h1>
             </div>
@@ -85,8 +84,11 @@ const HeroSection = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-10 sm:mt-16 md:mt-20 flex justify-center sm:justify-start">
+        <div className="py-10">
+        <Link href="/contact">
           <Button text="LET'S TALK" />
+        </Link>
+
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ export default function ProjectDetailAccordion() {
           return (
             <div
               key={index}
-              className={`border-b border-gray-700 pb-4 px-4 rounded-lg transition-colors ${
+              className={`border-b border-gray-700 pb-4  rounded-lg transition-colors ${
                 isOpen ? "bg-[#0f0f0f]" : ""
               }`}
             >
