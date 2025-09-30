@@ -28,7 +28,7 @@ const Page = () => {
     setStatus("sending");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/tm9211ya@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/tahir_csf13@hotmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(formData),

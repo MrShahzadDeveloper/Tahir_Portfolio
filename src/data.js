@@ -70,7 +70,7 @@ export const projects = [
       client: "Hā Labs",
       category: "HealthTech",
       completedOn: "August 12, 2025",
-      website: "https://play.google.com/store/apps/details?id=com.ha.accelrate",
+      googleStore: "https://play.google.com/store/apps/details?id=com.ha.accelrate",
     },
     socials: [
       {
@@ -116,8 +116,8 @@ export const projects = [
       client: "Barbr Inc.",
       category: "Business Tech",
       completedOn: "September 20, 2022",
-      website:
-        "https://play.google.com/store/apps/details?id=com.barbrme&hl=en",
+      googleStore:"https://play.google.com/store/apps/details?id=com.barbrme&hl=en",
+      appStore:"https://apps.apple.com/pk/app/barbr-biz/id1550249560",
     },
     socials: [
       {
@@ -163,7 +163,8 @@ export const projects = [
     client: "Alabama A&M University Athletics",
     category: "Sports",
     completedOn: "October 2, 2023",
-    website: "https://play.google.com/store/apps/details?id=com.aamubulldogs",
+    googleStore: "https://play.google.com/store/apps/details?id=com.aamubulldogs",
+    appStore: "https://apps.apple.com/pk/app/aamu-bulldogs/id6474274460 ",
   },
   socials: [
     { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/bulldogsgaming" },
@@ -196,7 +197,8 @@ export const projects = [
     client: "University of Alabama in Huntsville Athletics",
     category: "Sports",
     completedOn: "August 29, 2022",
-    website: "https://play.google.com/store/apps/details?id=com.uahchargers",
+    googleStore: "https://play.google.com/store/apps/details?id=com.uahchargers",
+    appStore: "https://apps.apple.com/pk/app/uah-chargers/id6472647762 ",
   },
   socials: [
     { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/chargersapp" },
@@ -229,7 +231,8 @@ export const projects = [
     client: "University of North Alabama Athletics",
     category: "Sports",
     completedOn: "September 10, 2021",
-    website: "https://play.google.com/store/apps/details?id=com.nivyapp.roarlions",
+    googleStore: "https://play.google.com/store/apps/details?id=com.nivyapp.roarlions",
+    appStore: "https://apps.apple.com/pk/app/roar-lions/id1659498292 ",
   },
   socials: [
     { name: "Facebook", icon: FaFacebookF, link: "https://facebook.com/lionsnetwork" },
@@ -260,7 +263,7 @@ export const projects = [
       client: "Hā Labs",
       category: "HealthTech",
       completedOn: "August 12, 2024",
-      website: "https://www.haahealth.com/",
+      googleStore: "https://www.haahealth.com/",
     },
     socials: [
       {
@@ -306,7 +309,8 @@ export const projects = [
       client: "Vibe Labs",
       category: "Social Networking",
       completedOn: "April 5, 2021",
-      website: "https://apps.apple.com/us/app/vibe-matching-app/id6743134828",
+      googleStore: "",
+      appStore: "https://apps.apple.com/us/app/vibe-matching-app/id6743134828",
     },
     socials: [
       {
@@ -352,7 +356,7 @@ export const projects = [
     client: "digifoot",
     category: "HealthTech",
     completedOn: "02 October 2021",
-    website: "https://apps.apple.com/us/app/digifoot/id1600893181",
+    appStore: "https://apps.apple.com/us/app/digifoot/id1600893181",
   },
   socials: [
     {
@@ -399,7 +403,8 @@ export const projects = [
       client: "Mamu Labs",
       category: "MusicTech",
       completedOn: "04 November 2020",
-      website: "https://apps.apple.com/us/app/mamu/id6736948723",
+      googleStore: "https://play.google.com/store/apps/details?id=com.alphors.mamu&hl=en",
+      appStore: "https://apps.apple.com/us/app/mamu/id6736948723",
     },
     socials: [
       {

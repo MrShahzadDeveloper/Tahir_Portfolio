@@ -49,7 +49,7 @@ const ContactSection = () => {
         variants={fadeUp}
         className="text-lg sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-bold mt-4 break-words"
       >
-        tm9211ya@gmail.com
+        tahir_csf13@hotmail.com
       </motion.p>
 
       {/* Button */}
