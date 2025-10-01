@@ -17,12 +17,15 @@ const Page = () => {
     phone: "",
     message: "",
   });
-  const [status, setStatus] = useState("idle");
 
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  // handle input change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // handle form submit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
@@ -30,15 +33,22 @@ const Page = () => {
     try {
       const response = await fetch("https://formsubmit.co/ajax/tahir_csf13@hotmail.com", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(formData),
       });
+
       if (response.ok) {
         setStatus("success");
         setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
         toast.success("Message sent successfully!");
-      } else throw new Error("Failed to send");
+      } else {
+        throw new Error("Failed to send");
+      }
     } catch (error) {
+      console.error(error); // ✅ Now ESLint sees "error" is used
       setStatus("error");
       toast.error("Failed to send message. Try again later.");
     } finally {
@@ -46,7 +56,7 @@ const Page = () => {
     }
   };
 
-  // Animation variants
+  // animation variants
   const containerVariants: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.15 } },
@@ -57,7 +67,7 @@ const Page = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  // Form inView hook
+  // form inView hook
   const [formRef, formInView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
@@ -77,7 +87,10 @@ const Page = () => {
             <p className="text-lg font-semibold">Estimate Your Project</p>
             <hr className="w-[80px] text-[#575757]" />
           </motion.div>
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-5xl lg:text-8xl font-bold">
+          <motion.h2
+            variants={itemVariants}
+            className="text-3xl md:text-5xl lg:text-8xl font-bold"
+          >
             Get in touch
           </motion.h2>
         </motion.div>
