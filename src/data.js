@@ -71,6 +71,7 @@ export const projects = [
       category: "HealthTech",
       completedOn: "August 12, 2025",
       googleStore: "https://play.google.com/store/apps/details?id=com.ha.accelrate",
+      appStore: "https://apps.apple.com/pk/app/h%C4%81-app/id6751707249 ",
     },
     socials: [
       {
@@ -459,38 +460,33 @@ export const testimonials = [
     text: "Working with Tahir on the Hā Health AI app was an amazing experience. He perfectly captured our vision of combining wellness, nutrition, and mindfulness into a seamless app. The design and functionality exceeded our expectations.",
     name: "Sarah Mitchell",
     role: "Founder, Hā Labs",
-    image: client4,
-  },
-  {
-    text: "Tahir built the UNA Charger app for our college tournaments, and it has completely changed how we organize events. From team registrations to match updates, everything runs smoothly now. His dedication made this project a huge success.",
-    name: "Imran Haider",
-    role: "Sports Coordinator",
     image: client3,
   },
   {
-    text: "The Barbr app turned out exactly how we imagined—simple, intuitive, and powerful for managing barber appointments. Tahir’s ability to translate our business needs into a user-friendly app was outstanding.",
-    name: "Robert Fox",
-    role: "Owner, Barbr Studios",
-    image: client5,
+    text: "Tahir built the UNA Charger app for our college tournaments, and it has completely changed how we organize events. From team registrations to match updates, everything runs smoothly now. His dedication made this project a huge success.",
+    name: "Matthew Rhodes",
+    role: "Founder of Nivy Techenologies",
+    image: client4,
   },
   {
     text: "Vibe Matching was a challenging idea, but Tahir delivered it brilliantly. The interactive features and clean UI make connecting people seamless. His creativity and technical expertise really shone through.",
-    name: "Sophia Khan",
-    role: "Product Lead, Vibe",
+    name: "Muhammad Naeem Maqsood",
+    role: "CTO & GenAI Specialist ",
     image: client1,
   },
   {
+    text: "The Barbr app turned out exactly how we imagined—simple, intuitive, and powerful for managing barber appointments. Tahir’s ability to translate our business needs into a user-friendly app was outstanding.",
+    name: "Reef Ray",
+    role: "Founder & CEO @Barbr",
+    image: client5,
+  },
+  {
     text: "With the Digifoot scanner app, Tahir helped us bring advanced 3D foot scanning technology to our customers. The integration with our webshop was flawless, and the app performs with precision. A real game-changer for our business.",
-    name: "James Anderson",
-    role: "CEO, Digifoot",
+    name: "Shehryar Malik",
+    role: "AI-Powered Products",
     image: client2,
   },
-  // {
-  //   text: "Mamu Entertainment redefined live DJ events for us. Thanks to Tahir, fans can now vote on songs in real time and DJs can adjust instantly. His innovative approach created an unforgettable experience for music lovers.",
-  //   name: "Ayesha Malik",
-  //   role: "Head of Marketing, Mamu",
-  //   image: client6,
-  // },
+  
 ];
 
 export const workProcess = [

@@ -11,7 +11,6 @@ interface HeroHeaderProps {
   introText: string;
   heading1: string;
   heading2: string;
-  bg?: string;
 }
 
 // Variants for staggered text
@@ -34,8 +33,7 @@ const fadeUp: Variants = {
 const HeroHeader: React.FC<HeroHeaderProps> = ({
   introText,
   heading1,
-  heading2,
-  bg,
+  heading2
 }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
